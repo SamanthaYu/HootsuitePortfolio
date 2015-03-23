@@ -9,8 +9,11 @@ body {
 	font-size: 100%;
 	height: 100%;
 	width: 100%;
+	font-family: 'Georgia', serif;
+	min-width: 925px;
+	min-height: 550px;
 }
-h1 {
+h1 {	/* Banner: "Samantha Yu" */
 	padding: 0;
 	margin: 0;
 	position: relative;
@@ -18,7 +21,7 @@ h1 {
 	font-family: 'Great Vibes', cursive;
 	color: #FFFFFF;
 }
-h2 {
+h2 {	/* Banner: "Dogwood Portfolio" */
 	padding: 0;
 	margin: 0;
 	position: relative;
@@ -26,20 +29,29 @@ h2 {
 	font-family: 'Georgia', serif;
 	color: rgb(62,199,197);
 }
-h3 {
+h3 {	/* Banner: Menu items */
 	padding: 0;
 	margin: 0;
 	font-family: 'Georgia', serif;
 	font-size: 250%;
 	color: #FFFFFF;
 }
-h4 {
+h4 {	/* "Portfolio" */
 	padding: 0;
 	margin: 0;
 	font-family: 'Georgia', serif;
 	font-size: 125%;
 	color: #FFFFFF;
 	font-weight: bold;
+}
+h5 {
+	padding: 0;
+	margin: 0;
+	font-size: 200%;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	text-align: middle;
 }
 div {
 	margin: 0;
@@ -78,6 +90,24 @@ div.menuButton:hover {
 .menuLinks {
 	padding-left: 10px;
 	color: #FFC563;
+	font-family: 'Georgia', serif;
+	font-size: 100%;
+}
+.hiddenContent {
+	display: none;
+}
+.screenshot {
+	border: 5px outset #6f8a91;
+	width: calc(50% - 15px);
+	width: -o-calc(50% - 15px); /* opera */
+	width: -webkit-calc(50% - 15px); /* google, safari */
+	width: -moz-calc(50% - 15px); /* firefox */
+	display: inline-block;
+}
+.description{
+	display: inline-block;
+	text-align: center;
+	width: 50%;
 }
 #banner {
 	background: -webkit-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Safari 5.1 to 6.0 */
@@ -85,7 +115,6 @@ div.menuButton:hover {
 	background: -moz-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* Standard syntax */
 	height: 115px;
-	min-width: 925px;
  }
 #bannerTitle {
 	display: inline-block;
@@ -142,4 +171,25 @@ div.menuButton:hover {
 	vertical-align: middle;
 	padding: 15px;
 	margin: 0;
+}
+#topBody {
+	height: 50%;
+	display: inline-block;
+}
+#bottomBody {
+	height: 50%;
+	display: inline-block;
+	overflow: hidden;
+}
+#paintScreenshot {
+	vertical-align: middle;
+}
+#paintDescription {
+	vertical-align: middle;
+}
+#bjDescription {
+	vertical-align: middle;
+}
+#bjScreenshot {
+	vertical-align: middle;
 }

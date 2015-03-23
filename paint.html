@@ -4,6 +4,15 @@
 		<TITLE>Samantha Yu: Dogwood</TITLE>
 		<link rel="stylesheet" type="text/css" href="dogwoodStyle.css">
 		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<SCRIPT TYPE="TEXT/JAVASCRIPT">
+			function showDiv(option) {
+				var numDivs = document.getElementById('mainBody').getElementsByTagName('div');
+				for (var i=0; i<numDivs.length; i++) {
+					numDivs[i].style.display = 'none';
+				}
+				numDivs[option].style.display = 'block';
+			}
+		</SCRIPT>
 	<HEAD>
 	<BODY>
 		<div id="banner">
@@ -25,18 +34,14 @@
 		</div>
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
-				<div id="topBody">
-					<img src="Images/PaintScreenshot.png" alt="Paint Program" class="screenshot" id="paintScreenshot">
-					<div class="description" id="paintDescription"><h5> Paint Program: </h5><hr> I created this paint program in <b>Java</b> for my AP Computer Science 12 class. This paint program has three unique paint tools in five possible colours and in three different sizes. The paint program also has the capability to add and delete layers. </div>
-				</div>
-				<div id="bottomBody">
-					<div class="description" id="bjDescription"><h5> Blackjack Game: </h5><hr> I created a Blackjack game in <b>JavaScript</b> for my Computers 11 class. In this BlackJack game, the user wins or loses money based on the outcome. </div>
-					<img src="Images/Blackjack.jpg" alt="Blackjack Game" class="screenshot" id="bjScreenshot">
-				</div>
+				<div id="Colours"><table><td> Talking about colours here </td></table></div>
+				<div class="hiddenContent" id="Tools"><table><td> Talking about tools here </td></table></div>
 			</div>
 			<div class="bodyContent" id="sidebar">
 				<h4> Portfolio </h4>
 				<a href="paint.html" class="menuLinks"> Paint Tutorials </a>
+				<br><a href="" onclick="showDiv('Colours'); return false"> Colours </a>
+				<br><a href="" onclick="showDiv('Tools'); return false"> Tools </a>
 			</div>
 		</div>
 	</BODY>
