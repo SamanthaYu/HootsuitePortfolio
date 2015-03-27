@@ -73,6 +73,9 @@ video {
 	margin-left: auto;
 	margin-right: auto;
 }
+a {
+	color: #FFFFFF;
+}
 .menuButton {
 	display: inline-block;
 	vertical-align: middle;
@@ -97,6 +100,17 @@ div.menuButton:hover {
 	color: #FFC563;
 	font-family: 'Georgia', serif;
 	font-size: 100%;
+}
+span.class {
+	color: #E8C076;	/* Bright orange*/
+	font-style: italic;
+	font-weight: bold;
+}
+span.var {
+	color: #A1EDE6;	/* Light blue */
+}
+span.method {
+	color: #DCEDA8;	/* Yellowish-Green */
 }
 #banner {
 	background: -webkit-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Safari 5.1 to 6.0 */

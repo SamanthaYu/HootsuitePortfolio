@@ -1,0 +1,85 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/scripts/sh-v3.0-min.js"></script>
+		<!-- Same stylesheet as http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreDefault.css but without the vertical scrollbar on the side -->
+		<link type="text/css" rel="stylesheet" href="abjlkSyntaxHighlighter.css"/>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><h3> About </h3></div>
+				<div class="menuButton"><h3> BlackJack </h3></div>
+				<div class="menuButton"><h3> Paint </h3></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Double Buffering </h5> <hr>
+				<p> The process of directly painting an image to the screen then completely erasing that image before the next image is painted causes flickering.
+					<a href="https://docs.oracle.com/javase/tutorial/extra/fullscreen/doublebuf.html" target="_blank"> Double buffering </a> avoids this flickering by creating an off-screen image while another image is painted to the screen.
+					The off-screen image is later transferred to the screen and a new off-screen image is created.
+				</p> <br>
+				<p>
+					When the user draws on the canvas, <span class="method">useTool()</span> grabs the current off-screen layer and creates a <span class="class">Graphics2D</span> context associated with that layer.
+					The paint tools draw onto the <span class="class">Graphics2D</span> <span class="var">cgBuffer</span> and stores those changes in <span class="class">BufferedImage</span> <span class="var">cvMem</span>.
+				<p>
+				<div id="highlighterMainDiv_93952" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>PaintTools.java -- Painting with a Tool</caption><tbody><tr><td class="gutter"><div class="line number57 index0 alt2">57</div><div class="line number58 index1 alt1">58</div><div class="line number59 index2 alt2">59</div><div class="line number60 index3 alt1">60</div><div class="line number61 index4 alt2">61</div><div class="line number62 index5 alt1">62</div><div class="line number63 index6 alt2">63</div><div class="line number64 index7 alt1">64</div><div class="line number65 index8 alt2">65</div><div class="line number66 index9 alt1">66</div><div class="line number67 index10 alt2">67</div><div class="line number68 index11 alt1">68</div><div class="line number69 index12 alt2">69</div></td><td id="codeContainer_93952" class="code"><div id="container_93952" class="container"><div class="line number57 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">useTool(</code><code class="java keyword">int</code> <code class="java plain">numTool, </code><code class="java keyword">int</code> <code class="java plain">oldX, </code><code class="java keyword">int</code> <code class="java plain">oldY, </code><code class="java keyword">int</code> <code class="java plain">newX, </code><code class="java keyword">int</code> <code class="java plain">newY) {&nbsp; </code><code class="java comments">// Selects specific tool</code></div><div class="line number58 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cvMem = lab13.imageArray.get(lab13.getcLayerNum()); </code><code class="java comments">// Grabs the current layer</code></div><div class="line number59 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cgBuffer = (Graphics2D) cvMem.getGraphics();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="java comments">// Creates the graphics context for that layer to be used in double buffering</code></div><div class="line number60 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">setPaintColor(cgBuffer);</code></div><div class="line number61 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number62 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// The y-coordinates subtract the menu bar's height, because the canvas layers do not include the menu bar</code></div><div class="line number63 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">if</code> <code class="java plain">(numTool == </code><code class="java value">1</code><code class="java plain">)</code></div><div class="line number64 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">pencil(oldX, oldY - menuBar.getMenuHeight(), newX, newY - menuBar.getMenuHeight());</code></div><div class="line number65 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">else</code> <code class="java keyword">if</code> <code class="java plain">(numTool == </code><code class="java value">2</code><code class="java plain">)</code></div><div class="line number66 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">brush(oldX, oldY - menuBar.getMenuHeight(), newX, newY - menuBar.getMenuHeight());</code></div><div class="line number67 index10 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">else</code> <code class="java keyword">if</code> <code class="java plain">(numTool == </code><code class="java value">3</code><code class="java plain">)</code></div><div class="line number68 index11 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">spray(newX, newY - menuBar.getMenuHeight());</code></div><div class="line number69 index12 alt2"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_93952" class="displaysourcecode" >
+				public void useTool(int numTool, int oldX, int oldY, int newX, int newY) {  // Selects specific tool
+					cvMem = lab13.imageArray.get(lab13.getcLayerNum()); // Grabs the current layer
+					cgBuffer = (Graphics2D) cvMem.getGraphics();        // Creates the graphics context for that layer to be used in double buffering
+					setPaintColor(cgBuffer);
+					
+					// The y-coordinates subtract the menu bar's height, because the canvas layers do not include the menu bar
+					if (numTool == 1)
+						pencil(oldX, oldY - menuBar.getMenuHeight(), newX, newY - menuBar.getMenuHeight());
+					else if (numTool == 2)
+						brush(oldX, oldY - menuBar.getMenuHeight(), newX, newY - menuBar.getMenuHeight());
+					else if (numTool == 3)
+						spray(newX, newY - menuBar.getMenuHeight());
+				}
+				</pre>
+
+				<p>
+					In my paint program, <span class="class">Graphics2D</span> <span class="var">g2Frame</span> paints the off-screen image stored in <span class="class">ArrayList&lt;BufferedImage&gt;</span> <span class="var">imageArray</span> at the index of <span class="class">int</span> <span class="var">cLayerNum</span> onto the screen.
+					Instead of clearing the entire screen, <span class="method">update()</span> alters the display with only the changes made.
+				</p>
+				
+				<div id="highlighterMainDiv_844260" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>Lab13.java -- Update Screen</caption><tbody><tr><td class="gutter"><div class="line number225 index0 alt2">225</div><div class="line number226 index1 alt1">226</div><div class="line number227 index2 alt2">227</div><div class="line number228 index3 alt1">228</div><div class="line number229 index4 alt2">229</div><div class="line number230 index5 alt1">230</div><div class="line number231 index6 alt2">231</div><div class="line number232 index7 alt1">232</div><div class="line number233 index8 alt2">233</div><div class="line number234 index9 alt1">234</div><div class="line number235 index10 alt2">235</div></td><td id="codeContainer_844260" class="code"><div id="container_844260" class="container"><div class="line number225 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">update(Graphics g) {</code></div><div class="line number226 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// When repaint() is called, the update() then calls paint()</code></div><div class="line number227 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// Since "default implementation of update() clears the Component's background before calling paint()", </code></div><div class="line number228 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// (see <a href="http://journals.ecs.soton.ac.uk/java/tutorial/ui/drawing/update.html">http://journals.ecs.soton.ac.uk/java/tutorial/ui/drawing/update.html</a>)</code></div><div class="line number229 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// Then I removed the background from flickering by drawing the layers here</code></div><div class="line number230 index5 alt1">&nbsp;</div><div class="line number231 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">for</code> <code class="java plain">(</code><code class="java keyword">int</code> <code class="java plain">k = </code><code class="java value">0</code><code class="java plain">; k &lt; imageArray.size(); k++) {</code></div><div class="line number232 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">g2Frame.drawImage(imageArray.get(k), </code><code class="java value">0</code><code class="java plain">, menuBar.getMenuHeight(), </code><code class="java keyword">this</code><code class="java plain">);</code></div><div class="line number233 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number234 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paint(g);</code></div><div class="line number235 index10 alt2"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_844260" class="displaysourcecode" >
+				public void update(Graphics g) {
+					// When repaint() is called, the update() then calls paint()
+					// Since "default implementation of update() clears the Component's background before calling paint()", 
+					// (see http://journals.ecs.soton.ac.uk/java/tutorial/ui/drawing/update.html)
+					// Then I removed the background from flickering by drawing the layers here
+
+					for (int k = 0; k &lt; imageArray.size(); k++) {
+						g2Frame.drawImage(imageArray.get(k), 0, menuBar.getMenuHeight(), this);
+					}
+					paint(g);
+				}
+				</pre>
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4> Portfolio </h4>
+				<a href="paint.html" class="menuLinks"> Paint Tutorials </a>
+			</div>
+		</div>
+	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
+	</BODY>
+</HTML>
