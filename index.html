@@ -4,6 +4,28 @@
 		<TITLE>Samantha Yu: Dogwood</TITLE>
 		<link rel="stylesheet" type="text/css" href="dogwoodStyle.css">
 		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<STYLE>
+			.halfBody {
+				height: 50%;
+				display: inline-block;
+				overflow: hidden;
+			}
+			.screenshot {
+				border: 5px outset #6f8a91;
+				width: calc(50% - 15px);
+				width: -o-calc(50% - 15px); /* opera */
+				width: -webkit-calc(50% - 15px); /* google, safari */
+				width: -moz-calc(50% - 15px); /* firefox */
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.description{
+				display: inline-block;
+				text-align: center;
+				width: 50%;
+				vertical-align: middle;
+			}			
+		</STYLE>
 	<HEAD>
 	<BODY>
 		<div id="banner">
@@ -25,13 +47,13 @@
 		</div>
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
-				<div id="topBody">
-					<img src="Images/PaintScreenshot.png" alt="Paint Program" class="screenshot" id="paintScreenshot">
-					<div class="description" id="paintDescription"><h5> Paint Program: </h5><hr> I created this paint program in <b>Java</b> for my AP Computer Science 12 class. This paint program has three unique paint tools in five possible colours and in three different sizes. The paint program also has the capability to add and delete layers. </div>
+				<div class="halfBody">
+					<img src="Images/PaintScreenshot.png" alt="Paint Program" class="screenshot">
+					<div class="description"><h5> Paint Program: </h5><hr><p> I created this paint program in <b>Java</b> for my AP Computer Science 12 class. This paint program has three unique paint tools in five possible colours and in three different sizes. The paint program also has the capability to add and delete layers. </p></div>
 				</div>
-				<div id="bottomBody">
-					<div class="description" id="bjDescription"><h5> Blackjack Game: </h5><hr> I created a Blackjack game in <b>JavaScript</b> for my Computers 11 class. In this BlackJack game, the user wins or loses money based on the outcome. </div>
-					<img src="Images/Blackjack.jpg" alt="Blackjack Game" class="screenshot" id="bjScreenshot">
+				<div class="halfBody">
+					<div class="description"><h5> Blackjack Game: </h5><hr><p> I created a Blackjack game in <b>JavaScript</b> for my Computers 11 class. In this BlackJack game, the user wins or loses money based on the outcome. </p></div>
+					<img src="Images/Blackjack.jpg" alt="Blackjack Game" class="screenshot">
 				</div>
 			</div>
 			<div class="bodyContent" id="sidebar">

@@ -44,14 +44,14 @@ h4 {	/* "Portfolio" */
 	color: #FFFFFF;
 	font-weight: bold;
 }
-h5 {
+h5 {	/* Page headings; eg "Paint Program"; "Colours" */
 	padding: 0;
 	margin: 0;
 	font-size: 200%;
 	font-weight: bold;
 	font-style: italic;
 	color: #000000;
-	text-align: middle;
+	text-align: center;
 }
 div {
 	margin: 0;
@@ -67,6 +67,11 @@ p {
 ul {
 	padding: 0;
 	margin: 0;
+}
+video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .menuButton {
 	display: inline-block;
@@ -92,22 +97,6 @@ div.menuButton:hover {
 	color: #FFC563;
 	font-family: 'Georgia', serif;
 	font-size: 100%;
-}
-.hiddenContent {
-	display: none;
-}
-.screenshot {
-	border: 5px outset #6f8a91;
-	width: calc(50% - 15px);
-	width: -o-calc(50% - 15px); /* opera */
-	width: -webkit-calc(50% - 15px); /* google, safari */
-	width: -moz-calc(50% - 15px); /* firefox */
-	display: inline-block;
-}
-.description{
-	display: inline-block;
-	text-align: center;
-	width: 50%;
 }
 #banner {
 	background: -webkit-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Safari 5.1 to 6.0 */
@@ -161,6 +150,7 @@ div.menuButton:hover {
 	vertical-align: middle;
 	margin-right: 10px;
 	padding: 15px;
+	overflow: auto;
 }
 #sidebar {
 	width: calc(25% - 30px);
@@ -171,25 +161,4 @@ div.menuButton:hover {
 	vertical-align: middle;
 	padding: 15px;
 	margin: 0;
-}
-#topBody {
-	height: 50%;
-	display: inline-block;
-}
-#bottomBody {
-	height: 50%;
-	display: inline-block;
-	overflow: hidden;
-}
-#paintScreenshot {
-	vertical-align: middle;
-}
-#paintDescription {
-	vertical-align: middle;
-}
-#bjDescription {
-	vertical-align: middle;
-}
-#bjScreenshot {
-	vertical-align: middle;
 }
