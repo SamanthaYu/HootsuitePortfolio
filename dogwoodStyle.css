@@ -10,7 +10,7 @@ body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Georgia', serif;
-	min-width: 925px;
+	min-width: 1000px;
 	min-height: 550px;
 }
 h1 {	/* Banner: "Samantha Yu" */
@@ -53,6 +53,9 @@ h5 {	/* Page headings; eg "Paint Program"; "Colours" */
 	color: #000000;
 	text-align: center;
 }
+hr {
+	border: 2px #FFFFFF inset;
+}
 div {
 	margin: 0;
 	padding: 0;
@@ -64,6 +67,9 @@ p {
 	font-size: 100%;
 	color: #000000;
 }
+a {
+	color: #FFFFFF;
+}
 ul {
 	padding: 0;
 	margin: 0;
@@ -72,9 +78,6 @@ video {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-a {
-	color: #FFFFFF;
 }
 .menuButton {
 	display: inline-block;
@@ -144,22 +147,22 @@ span.method {
 	border-left: medium double #FFFFFF;
 }
 #container {
-	width: calc(100% - 20px);
-	width: -o-calc(100% - 20px); /* opera */
-	width: -webkit-calc(100% - 20px); /* google, safari */
-	height: -moz-calc(100% - 20px); /* firefox */
-	height: calc(100% - 165px);
-	height: -o-calc(100% - 165px); /* opera */
-	height: -webkit-calc(100% - 165px); /* google, safari */
-	height: -moz-calc(100% - 165px); /* firefox */
+	width: calc(100% - 20px);			/* Internet Explorer */
+	width: -o-calc(100% - 20px); 		/* Opera */
+	width: -webkit-calc(100% - 20px); 	/* Google, Safari */
+	height: -moz-calc(100% - 20px); 	/* Firefox */
+	height: calc(100% - 165px);			/* Internet Explorer */
+	height: -o-calc(100% - 165px); 		/* Opera */
+	height: -webkit-calc(100% - 165px); /* Google, Safari */
+	height: -moz-calc(100% - 165px); 	/* Firefox */
 	margin: 0;
 	padding: 10px;
 }
 #mainBody {
-	width: calc(75% - 45px);
-	width: -o-calc(75% - 45px); /* opera */
-	width: -webkit-calc(75% - 45px); /* google, safari */
-	width: -moz-calc(75% - 45px); /* firefox */
+	width: calc(100% - 225px);			/* Internet Explorer */
+	width: -o-calc(100% - 225px); 		/* Opera */
+	width: -webkit-calc(100% - 225px); 	/* Google, Safari */
+	width: -moz-calc(100% - 225px); 	/* Firefox */
 	background-color: #00aa88;
 	vertical-align: middle;
 	margin-right: 10px;
@@ -167,10 +170,7 @@ span.method {
 	overflow: auto;
 }
 #sidebar {
-	width: calc(25% - 30px);
-	width: -o-calc(25% - 30px); /* opera */
-	width: -webkit-calc(25% - 30px); /* google, safari */
-	width: -moz-calc(25% - 30px); /* firefox */
+	width: 150px;
 	background-color: #6f8a91;
 	vertical-align: middle;
 	padding: 15px;

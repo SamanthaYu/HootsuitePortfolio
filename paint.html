@@ -6,10 +6,19 @@
 		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 		
 		<script type="text/javascript" src="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/scripts/sh-v3.0-min.js"></script>
-		<!-- Same stylesheet as http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreDefault.css but without the vertical scrollbar on the side -->
+		<!-- Same stylesheet as http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreDefault.css but with different colors and without the vertical scrollbar on the side -->
 		<link type="text/css" rel="stylesheet" href="abjlkSyntaxHighlighter.css"/>
+		
+		<STYLE>
+			#paintApplet {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				border: 5px outset #6f8a91;
+			}
+		</STYLE>
 	<HEAD>
-	<BODY>
+	<BODY ONLOAD="startup()">
 		<div id="banner">
 			<div id="bannerTitle">
 				<div id="bannerName">
@@ -31,24 +40,24 @@
 			<div class="bodyContent" id="mainBody">
 				<h5> Paint Program </h5> <hr>
 				<!--<applet code="Lab13.class" archive="Lab13.jar" width="100%"> </applet>-->
-				<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-						width="256" height="256"
+				<object id="paintApplet"
+						classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+						width="769" height="350"
 						codebase="http://java.sun.com/update/1.6.0/jinstall-6u30-windows-i586.cab#Version=1,6,0,0">
 				  <param name="archive" value="Lab13.jar" />
 				  <param name="code" value="Lab13.class" />
-				  <param name="appWidth" value="633" />
-				  <param name="appHeight" value="600" />
 				  <embed type="application/x-java-applet;version=1.6"
-						 width="633"
-						 archive="Lab13.jar"
-						 code="Lab13.class" 
-						 pluginspage="http://java.com/download/"/>
+						width="769"
+						height="350"
+						archive="Lab13.jar"
+						code="Lab13.class" 
+						pluginspage="http://java.com/download/"/>
 				  </embed>
 				</object>
 			</div>
 			<div class="bodyContent" id="sidebar">
 				<h4> Portfolio </h4>
-				<a href="paint.html" class="menuLinks"> Paint Tutorials </a>
+				<a href="paint.html" class="menuLinks"> Double Buffering </a>
 			</div>
 		</div>
 	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
