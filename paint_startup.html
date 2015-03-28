@@ -1,0 +1,55 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/scripts/sh-v3.0-min.js"></script>
+		<!-- Same stylesheet as http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreDefault.css but without the vertical scrollbar on the side -->
+		<link type="text/css" rel="stylesheet" href="abjlkSyntaxHighlighter.css"/>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><h3> About </h3></div>
+				<div class="menuButton"><h3> BlackJack </h3></div>
+				<div class="menuButton"><h3> Paint </h3></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Startup </h5> <hr>
+				<p> When the program is loaded, the applet, menu bar, canvas, and toolbar are created. </p>
+				
+				<div id="highlighterMainDiv_158599" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>Lab13.java -- On Startup</caption><tbody><tr><td class="gutter"><div class="line number37 index0 alt2">37</div><div class="line number38 index1 alt1">38</div><div class="line number39 index2 alt2">39</div><div class="line number40 index3 alt1">40</div><div class="line number41 index4 alt2">41</div><div class="line number42 index5 alt1">42</div><div class="line number43 index6 alt2">43</div><div class="line number44 index7 alt1">44</div></td><td id="codeContainer_158599" class="code"><div id="container_158599" class="container"><div class="line number37 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">init() {&nbsp;&nbsp;&nbsp; </code><code class="java comments">// When the paint program begins, the applet, menu bar, canvas, and toolbar are created</code></div><div class="line number38 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">createApplet();</code></div><div class="line number39 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// The menu bar's selection boxes are created but not the buttons that you can see; i.e. buttons are invisible</code></div><div class="line number40 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">menuBar = </code><code class="java keyword">new</code> <code class="java plain">Menu(</code><code class="java keyword">this</code><code class="java plain">);&nbsp;&nbsp; </code><code class="java comments">// The menu bar must be constructed before the canvas</code></div><div class="line number41 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">createCanvas();</code></div><div class="line number42 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">toolbar = </code><code class="java keyword">new</code> <code class="java plain">PaintTools(</code><code class="java keyword">this</code><code class="java plain">, menuBar);</code></div><div class="line number43 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">firstPaint = </code><code class="java keyword">true</code><code class="java plain">;</code></div><div class="line number44 index7 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_158599" class="displaysourcecode" >
+				public void init() {    // When the paint program begins, the applet, menu bar, canvas, and toolbar are created
+					createApplet();
+					// The menu bar's selection boxes are created but not the buttons that you can see; i.e. buttons are invisible
+					menuBar = new Menu(this);   // The menu bar must be constructed before the canvas
+					createCanvas();
+					toolbar = new PaintTools(this, menuBar);
+					firstPaint = true;
+				}
+				</pre>
+				
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4> Portfolio </h4>
+				<a href="paint.html" class="menuLinks"> Paint Tutorials </a>
+			</div>
+		</div>
+	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
+	</BODY>
+</HTML>
