@@ -15,49 +15,74 @@
 				margin-left: auto;
 				margin-right: auto;
 				border: 5px outset #6f8a91;
+				margin-bottom: 10px;
 			}
 		</STYLE>
 	<HEAD>
 	<BODY ONLOAD="startup()">
 		<div id="banner">
-			<div id="bannerTitle">
+			<div id="bannerTitle"><a href="index.html" id="indexBanner">
 				<div id="bannerName">
 					<h1> Samantha Yu </h1>
 				</div>
 				<div id="bannerDogwood">
 					<h2> Dogwood Portfolio </h2>
 				</div>
-			</div>
+			</a></div>
 			<div class="verticalLine" id="boldLine"></div>
 			<div class="verticalLine" id="regLine"></div>
 			<div id="bannerMenu">
-				<div class="menuButton"><h3> About </h3></div>
-				<div class="menuButton"><h3> BlackJack </h3></div>
-				<div class="menuButton"><h3> Paint </h3></div>
+				<div class="menuButton"><a href="about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton"><a href="blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
 			</div>
 		</div>
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
-				<h5> Paint Program </h5> <hr>
-				<!--<applet code="Lab13.class" archive="Lab13.jar" width="100%"> </applet>-->
+				<h5> Paint Program: Java </h5> <hr>
 				<object id="paintApplet"
-						classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-						width="769" height="350"
+						classid="clsid:CAFEEFAC-0017-0000-FFFF-ABCDEFFEDCBA"
+						width="745" height="350"
 						codebase="http://java.sun.com/update/1.6.0/jinstall-6u30-windows-i586.cab#Version=1,6,0,0">
 				  <param name="archive" value="Lab13.jar" />
 				  <param name="code" value="Lab13.class" />
 				  <embed type="application/x-java-applet;version=1.6"
-						width="769"
+						width="745"
 						height="350"
 						archive="Lab13.jar"
 						code="Lab13.class" 
 						pluginspage="http://java.com/download/"/>
 				  </embed>
 				</object>
+				
+				<p>
+					If the applet is not running, click on the applet for details why.
+				</p>
+				<ul>
+					If the error message states that <a href="https://www.java.com/en/download/help/jcp_security.xml" target="_blank">your security settings have blocked a local application from running"</a>
+					<table>
+						<tr>
+							<td class="tdHeading javaError"> Windows Users </td>
+							<td class="tdHeading javaError"> Mac Users </td>
+						</tr>
+						<tr>
+							<td class="javaError"> Open Windows Start Menu &gt;&gt; Control Panel &gt;&gt; Programs &gt;&gt; Java </td>
+							<td class="javaError"> Click Apple icon in the upper left of screen &gt;&gt; System Preferences &gt;&gt; Java icon to access the Java Control Panel</td>
+						</tr>
+					</table>
+					<li> In the <b>Java Control Panel</b>, click on the Security Tab </li>
+					<li> Copy the URL from this page </li>
+					<li> Open Edit Site List, paste the URL, and click Add </li>
+					<li> Finally, press OK in the Java Control Panel and refresh this page </li>
+				</ul>
 			</div>
 			<div class="bodyContent" id="sidebar">
-				<h4> Portfolio </h4>
-				<a href="paint.html" class="menuLinks"> Double Buffering </a>
+				<h4> Paint Program </h4>
+				<ul class="ulMenu"><a href="paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="paint_startup" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="" class="menuLinks"> Colours </a><ul>
 			</div>
 		</div>
 	<script type="text/javascript">SyntaxHighlighter.initialize();</script>

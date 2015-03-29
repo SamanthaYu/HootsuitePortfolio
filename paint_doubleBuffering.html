@@ -11,20 +11,20 @@
 	<HEAD>
 	<BODY>
 		<div id="banner">
-			<div id="bannerTitle">
+			<div id="bannerTitle"><a href="index.html" id="indexBanner">
 				<div id="bannerName">
 					<h1> Samantha Yu </h1>
 				</div>
 				<div id="bannerDogwood">
 					<h2> Dogwood Portfolio </h2>
 				</div>
-			</div>
+			</a></div>
 			<div class="verticalLine" id="boldLine"></div>
 			<div class="verticalLine" id="regLine"></div>
 			<div id="bannerMenu">
-				<div class="menuButton"><h3> About </h3></div>
-				<div class="menuButton"><h3> BlackJack </h3></div>
-				<div class="menuButton"><h3> Paint </h3></div>
+				<div class="menuButton"><a href="about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton"><a href="blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
 			</div>
 		</div>
 		<div id="container">
@@ -76,8 +76,12 @@
 				</pre>
 			</div>
 			<div class="bodyContent" id="sidebar">
-				<h4> Portfolio </h4>
-				<a href="paint.html" class="menuLinks"> Paint Tutorials </a>
+				<h4> Paint Program </h4>
+				<ul class="ulMenu"><a href="paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="" class="menuLinks"> Colours </a><ul>
 			</div>
 		</div>
 	<script type="text/javascript">SyntaxHighlighter.initialize();</script>

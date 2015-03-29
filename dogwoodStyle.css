@@ -27,7 +27,7 @@ h2 {	/* Banner: "Dogwood Portfolio" */
 	position: relative;
 	font-size: 125%;
 	font-family: 'Georgia', serif;
-	color: rgb(62,199,197);
+	color: #3EC7C5;
 }
 h3 {	/* Banner: Menu items */
 	padding: 0;
@@ -40,7 +40,7 @@ h4 {	/* "Portfolio" */
 	padding: 0;
 	margin: 0;
 	font-family: 'Georgia', serif;
-	font-size: 125%;
+	font-size: 120%;
 	color: #FFFFFF;
 	font-weight: bold;
 }
@@ -61,7 +61,7 @@ div {
 	padding: 0;
 }
 p {
-	padding: 0;
+	padding-top: 0;
 	margin: 0;
 	font-family: 'Georgia', serif;
 	font-size: 100%;
@@ -72,12 +72,19 @@ a {
 }
 ul {
 	padding: 0;
-	margin: 0;
+	margin-left: 10px;
+}
+ul>li {
+	margin-left: 45px;
 }
 video {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+.javaError {
+	border: 3px solid #000000;
+	background: #E0E0E0;
 }
 .menuButton {
 	display: inline-block;
@@ -87,7 +94,7 @@ video {
 	padding: 0;
 }
 div.menuButton:hover {
-	border-bottom: thick solid rgb(62,199,197);
+	border-bottom: thick solid #3EC7C5;
 }
 .verticalLine {
 	display: inline-block;
@@ -98,14 +105,20 @@ div.menuButton:hover {
 	display: inline-block;
 	height: 100%;
 }
+.ulMenu {
+	padding: 0;
+	margin: 0 0 5px 0;
+}
 .menuLinks {
 	padding-left: 10px;
 	color: #FFC563;
 	font-family: 'Georgia', serif;
 	font-size: 100%;
+	font-style: italic;
 }
 span.class {
 	color: #E8C076;	/* Bright orange*/
+	color: #1663C7;
 	font-style: italic;
 	font-weight: bold;
 }
@@ -114,6 +127,21 @@ span.var {
 }
 span.method {
 	color: #DCEDA8;	/* Yellowish-Green */
+}
+.tdHeading {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	width: 50%;
+}
+.headingLink {
+	text-decoration: none;
+}
+.submenuHeading {
+	text-decoration: none;
+}
+div.selectedMenu {
+	border-bottom: thick solid #3EC7C5;
 }
 #banner {
 	background: -webkit-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Safari 5.1 to 6.0 */
@@ -140,6 +168,9 @@ span.method {
 	height: 30px;
 	vertical-align: middle;
 }
+#indexBanner {
+	text-decoration: none;
+}
 #boldLine {
 	border-left: thick solid #FFFFFF;
 }
@@ -163,7 +194,7 @@ span.method {
 	width: -o-calc(100% - 225px); 		/* Opera */
 	width: -webkit-calc(100% - 225px); 	/* Google, Safari */
 	width: -moz-calc(100% - 225px); 	/* Firefox */
-	background-color: #00aa88;
+	background-color: #23C2A2;
 	vertical-align: middle;
 	margin-right: 10px;
 	padding: 15px;
