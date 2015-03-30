@@ -1,4 +1,3 @@
-<SCRIPT LANGUAGE="JavaScript">
 /* Instead of asking the player how many cards they would like to draw, they just keep on pressing the "hit" button to draw a card (I thought that this would be easier for the player, and that they could change their bet before drawing any cards).
 I changed the loop, so that the computer will continue to draw cards until it either goes over 21 or has a higher total than the player.
 
@@ -15,7 +14,7 @@ What I added:
 	When the game ends:
 		Once the player played ten rounds, a confirm box pops up saying that the game has ended
 			If the player clicks "yes", another confirm box asks if they would like to restart with the same amount they finished with or the $500 they started with.
-			If the player clicks "no", the window closes automatically by using the function close()
+			If the player clicks "no", the window will refresh automatically by using the function location.reload(true);
 */
 	yourTotal = 0
 	yourWin = 0
@@ -267,7 +266,7 @@ What I added:
 				document.blackJack.potMoney.value = document.blackJack.yourMoney[0].value
 			}
 			else {
-				close();
+				location.reload(true);
 			}
 		}
 	}
@@ -286,7 +285,6 @@ What I added:
 			document.blackJack.potMoney.value = document.blackJack.yourMoney[0].value
 		}
 		else {
-			close();
+			location.reload(true);
 		}
 	}
-</SCRIPT>

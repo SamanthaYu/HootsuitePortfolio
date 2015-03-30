@@ -70,13 +70,6 @@ p {
 a {
 	color: #FFFFFF;
 }
-ul {
-	padding: 0;
-	margin-left: 10px;
-}
-ul>li {
-	margin-left: 45px;
-}
 video {
 	display: block;
 	margin-left: auto;
@@ -144,10 +137,10 @@ div.selectedMenu {
 	border-bottom: thick solid #3EC7C5;
 }
 #banner {
-	background: -webkit-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(60deg, rgb(12, 64, 87), rgb(75, 151, 184)); /* Standard syntax */
+	background: -webkit-linear-gradient(60deg, #0C4057, #4B97B8); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(60deg, #0C4057, #4B97B8); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(60deg, #0C4057), #4B97B8); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(60deg, #0C4057, #4B97B8); /* Standard syntax */
 	height: 115px;
  }
 #bannerTitle {
@@ -194,7 +187,7 @@ div.selectedMenu {
 	width: -o-calc(100% - 225px); 		/* Opera */
 	width: -webkit-calc(100% - 225px); 	/* Google, Safari */
 	width: -moz-calc(100% - 225px); 	/* Firefox */
-	background-color: #23C2A2;
+	background-color: #15997E;
 	vertical-align: middle;
 	margin-right: 10px;
 	padding: 15px;
@@ -202,7 +195,7 @@ div.selectedMenu {
 }
 #sidebar {
 	width: 150px;
-	background-color: #6f8a91;
+	background-color: #4A616B;
 	vertical-align: middle;
 	padding: 15px;
 	margin: 0;
