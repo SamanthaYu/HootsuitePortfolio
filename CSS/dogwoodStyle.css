@@ -36,7 +36,7 @@ h3 {	/* Banner: Menu items */
 	font-size: 250%;
 	color: #FFFFFF;
 }
-h4 {	/* "Portfolio" */
+h4 {	/* Sidebar Headings*/
 	padding: 0;
 	margin: 0;
 	font-family: 'Georgia', serif;
@@ -104,13 +104,15 @@ div.menuButton:hover {
 }
 .menuLinks {
 	padding-left: 10px;
-	color: #FFC563;
+	color: #B0D9EB;
 	font-family: 'Georgia', serif;
 	font-size: 100%;
 	font-style: italic;
 }
+.menuLinks:hover {
+	color: #3EC7C5;
+}
 span.class {
-	color: #E8C076;	/* Bright orange*/
 	color: #1663C7;
 	font-style: italic;
 	font-weight: bold;
@@ -133,8 +135,27 @@ span.method {
 .submenuHeading {
 	text-decoration: none;
 }
+.selectedSubmenu {
+	color: #3EC7C5;
+}
+.submenuHeading:hover {
+	color: #3EC7C5;
+}
 div.selectedMenu {
 	border-bottom: thick solid #3EC7C5;
+}
+.download {
+	font-family: 'Georgia', serif;
+	font-size: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.downloadLink {
+	color: #000000;
+	text-decoration: none;
 }
 #banner {
 	background: -webkit-linear-gradient(60deg, #0C4057, #4B97B8); /* For Safari 5.1 to 6.0 */

@@ -63,7 +63,6 @@ What I added:
 				alert("You cannot bet a number with a decimal in it.")
 			}
 		}
-		
 	}
 	
 	function hit() {
@@ -234,7 +233,6 @@ What I added:
 		else if (yourMoneyTotal == 0 || yourMoneyTotal < 0) {
 			playAgain();
 		}
-		
 	}
 	
 	function checkNumRounds() {

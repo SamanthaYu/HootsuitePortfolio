@@ -30,29 +30,69 @@
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
 				<h5> Startup </h5> <hr>
-				<p> When the program is loaded, the applet, menu bar, canvas, and toolbar are created. </p>
-				
-				<div id="highlighterMainDiv_158599" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>Lab13.java -- On Startup</caption><tbody><tr><td class="gutter"><div class="line number37 index0 alt2">37</div><div class="line number38 index1 alt1">38</div><div class="line number39 index2 alt2">39</div><div class="line number40 index3 alt1">40</div><div class="line number41 index4 alt2">41</div><div class="line number42 index5 alt1">42</div><div class="line number43 index6 alt2">43</div><div class="line number44 index7 alt1">44</div></td><td id="codeContainer_158599" class="code"><div id="container_158599" class="container"><div class="line number37 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">init() {&nbsp;&nbsp;&nbsp; </code><code class="java comments">// When the paint program begins, the applet, menu bar, canvas, and toolbar are created</code></div><div class="line number38 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">createApplet();</code></div><div class="line number39 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// The menu bar's selection boxes are created but not the buttons that you can see; i.e. buttons are invisible</code></div><div class="line number40 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">menuBar = </code><code class="java keyword">new</code> <code class="java plain">Menu(</code><code class="java keyword">this</code><code class="java plain">);&nbsp;&nbsp; </code><code class="java comments">// The menu bar must be constructed before the canvas</code></div><div class="line number41 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">createCanvas();</code></div><div class="line number42 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">toolbar = </code><code class="java keyword">new</code> <code class="java plain">PaintTools(</code><code class="java keyword">this</code><code class="java plain">, menuBar);</code></div><div class="line number43 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">firstPaint = </code><code class="java keyword">true</code><code class="java plain">;</code></div><div class="line number44 index7 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
-				<pre id="presourcecode_158599" class="displaysourcecode" >
-				public void init() {    // When the paint program begins, the applet, menu bar, canvas, and toolbar are created
-					createApplet();
-					// The menu bar's selection boxes are created but not the buttons that you can see; i.e. buttons are invisible
-					menuBar = new Menu(this);   // The menu bar must be constructed before the canvas
-					createCanvas();
-					toolbar = new PaintTools(this, menuBar);
-					firstPaint = true;
+				<p>
+					Since <span class="class">PaintApp.java</span> has a <span class="class">Frame</span> and is a <span class="class">WindowListener</span>, <span class="class">MouseListener</span>, and <span class="class">MouseMotionListener</span>, the program must set the size of the applet, add Event listeners on startup, and make the applet visible on startup.
+					When <span class="method">createApp()</span> is called, the "click-able" components, like the menu, sidebar and canvas, are created.
+					These "click-able" components cannot be viewed yet until <span class="method">paint()</span> is called.
+				</p>
+	
+				<div id="highlighterMainDiv_852602" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>PaintApp.java -- Class Heading</caption><tbody><tr><td class="gutter"><div class="line number21 index0 alt2">21</div></td><td id="codeContainer_852602" class="code"><div id="container_852602" class="container"><div class="line number21 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">PaintApp </code><code class="java keyword">extends</code> <code class="java plain">Frame </code><code class="java keyword">implements</code> <code class="java plain">WindowListener, MouseListener, MouseMotionListener {</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_852602" class="displaysourcecode" >
+				public class PaintApp extends Frame implements WindowListener, MouseListener, MouseMotionListener {
+				</pre>
+
+				<div id="highlighterMainDiv_395027" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>PaintApp.java -- main() creates applet</caption><tbody><tr><td class="gutter"><div class="line number42 index0 alt1">42</div><div class="line number43 index1 alt2">43</div><div class="line number44 index2 alt1">44</div><div class="line number45 index3 alt2">45</div><div class="line number46 index4 alt1">46</div><div class="line number47 index5 alt2">47</div><div class="line number48 index6 alt1">48</div><div class="line number49 index7 alt2">49</div><div class="line number50 index8 alt1">50</div><div class="line number51 index9 alt2">51</div><div class="line number52 index10 alt1">52</div><div class="line number53 index11 alt2">53</div><div class="line number54 index12 alt1">54</div></td><td id="codeContainer_395027" class="code"><div id="container_395027" class="container"><div class="line number42 index0 alt1"><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String args[]) {&nbsp;&nbsp;&nbsp; </code><code class="java comments">// The main method handles the application framework</code></div><div class="line number43 index1 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">PaintApp paintProgram = </code><code class="java keyword">new</code> <code class="java plain">PaintApp();</code></div><div class="line number44 index2 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.addWindowListener(paintProgram);</code></div><div class="line number45 index3 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.addMouseListener(paintProgram);</code></div><div class="line number46 index4 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.addMouseMotionListener(paintProgram);</code></div><div class="line number47 index5 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number48 index6 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.appletWidth = </code><code class="java value">761</code><code class="java plain">;</code></div><div class="line number49 index7 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.appletHeight = </code><code class="java value">380</code><code class="java plain">;</code></div><div class="line number50 index8 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.setSize(paintProgram.appletWidth, paintProgram.appletHeight);</code></div><div class="line number51 index9 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number52 index10 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.setVisible(</code><code class="java keyword">true</code><code class="java plain">);</code></div><div class="line number53 index11 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">paintProgram.createApp();</code></div><div class="line number54 index12 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_395027" class="displaysourcecode" >
+				public static void main(String args[]) {    // The main method handles the application framework
+					PaintApp paintProgram = new PaintApp();
+					paintProgram.addWindowListener(paintProgram);
+					paintProgram.addMouseListener(paintProgram);
+					paintProgram.addMouseMotionListener(paintProgram);
+					
+					paintProgram.appletWidth = 761;
+					paintProgram.appletHeight = 380;
+					paintProgram.setSize(paintProgram.appletWidth, paintProgram.appletHeight);
+					
+					paintProgram.setVisible(true);
+					paintProgram.createApp();
 				}
 				</pre>
 				
+				<p>
+					After the <span class="method">main()</span> has finished executing, then <span class="method">paint()</span> is automatically called.
+					During the first time that <span class="method">paint()</span> is called, the menu bar is drawn and layers are created.
+				</p>
+				
+				<div id="highlighterMainDiv_436714" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>PaintApp.java -- First paint() call</caption><tbody><tr><td class="gutter"><div class="line number64 index0 alt1">64</div><div class="line number65 index1 alt2">65</div><div class="line number66 index2 alt1">66</div><div class="line number67 index3 alt2">67</div><div class="line number68 index4 alt1">68</div><div class="line number69 index5 alt2">69</div><div class="line number70 index6 alt1">70</div><div class="line number71 index7 alt2">71</div><div class="line number72 index8 alt1">72</div><div class="line number73 index9 alt2">73</div><div class="line number74 index10 alt1">74</div></td><td id="codeContainer_436714" class="code"><div id="container_436714" class="container"><div class="line number64 index0 alt1"><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">paint(Graphics g) {&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="java comments">// Called after paintProgram became visible and whenever the graphical output needs to be updated or repainted</code></div><div class="line number65 index1 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">g2Frame = (Graphics2D) g;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="java comments">// The abstract Graphics2D class extends the abstract Graphics class</code></div><div class="line number66 index2 alt1">&nbsp;</div><div class="line number67 index3 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">if</code> <code class="java plain">(firstPaint) {&nbsp;&nbsp; </code></div><div class="line number68 index4 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">menuBar.createMenu();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="java comments">// Menu items are drawn onto the menu off-screen image</code></div><div class="line number69 index5 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">g2Frame.drawImage(menuBar.menuImage, </code><code class="java value">0</code><code class="java plain">, </code><code class="java value">0</code><code class="java plain">, </code><code class="java keyword">this</code><code class="java plain">);&nbsp;&nbsp; </code><code class="java comments">// Off-screen image is drawn onto the applet; menu becomes visible</code></div><div class="line number70 index6 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">createLayers();</code></div><div class="line number71 index7 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">firstPaint = </code><code class="java keyword">false</code><code class="java plain">;</code></div><div class="line number72 index8 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">continuePaint = </code><code class="java keyword">true</code><code class="java plain">;</code></div><div class="line number73 index9 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number74 index10 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_436714" class="displaysourcecode" >
+				public void paint(Graphics g) {     // Called after paintProgram became visible and whenever the graphical output needs to be updated or repainted
+					g2Frame = (Graphics2D) g;       // The abstract Graphics2D class extends the abstract Graphics class
+
+					if (firstPaint) {   
+						menuBar.createMenu();       // Menu items are drawn onto the menu off-screen image
+						g2Frame.drawImage(menuBar.menuImage, 0, 0, this);   // Off-screen image is drawn onto the applet; menu becomes visible
+						createLayers();
+						firstPaint = false;
+						continuePaint = true;
+					}
+				}
+				</pre>
 			</div>
 			<div class="bodyContent" id="sidebar">
+				<h4><a href="about.html" class="submenuHeading"> About </a></h4>
+				<br>
 				<h4><a href="paint.html" class="submenuHeading"> Paint Program </a></h4>
 				<ul class="ulMenu"><a href="paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
-				<ul class="ulMenu"><a href="paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="paint_startup.html" class="menuLinks selectedSubmenu"> On Startup </a></ul>
 				<ul class="ulMenu"><a href="paint_layers.html" class="menuLinks"> Layers </a></ul>
 				<ul class="ulMenu"><a href="paint_menu.html" class="menuLinks"> Menu </a></ul>
 				<ul class="ulMenu"><a href="paint_colors.html" class="menuLinks"> Colors </a></ul>
 				<ul class="ulMenu"><a href="paint_source.html" class="menuLinks"> Source Code </a></ul>
+				<br>
+				<h4><a href="blackjack.html" class="submenuHeading"> Blackjack </a></h4>
+				<ul class="ulMenu"><a href="bj_gameplay.html" class="menuLinks"> Gameplay </a></ul>
+				<ul class="ulMenu"><a href="bj_money.html" class="menuLinks"> Money </a></ul>
+				<ul class="ulMenu"><a href="bj_source.html" class="menuLinks"> Source Code </a></ul>
 			</div>
 		</div>
 	<script type="text/javascript">SyntaxHighlighter.initialize();</script>

@@ -1,0 +1,116 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="../CSS/dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	
+		<script type="text/javascript" src="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/scripts/sh-v3.0-min.js"></script>
+		<!-- Same stylesheet as http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreDefault.css but with different colors and without the vertical scrollbar on the side -->
+		<link type="text/css" rel="stylesheet" href="../CSS/abjlkSyntaxHighlighter.css"/>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle"><a href="../index.html" id="indexBanner">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</a></div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><a href="about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton"><a href="paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Money </h5> <hr>
+				<p>
+					The player can select the amount of money they want to place as a bet by selecting radio buttons.
+					For the "Choose your own value", different alerts pop up if the player enters an invalid amount, less than 1, more than they have, or has a decimal in it.
+					If the player clicks cancel, it automatically selects the first radio button.
+				</p>
+				<div id="highlighterMainDiv_583890" class="syntaxhighlighter jscript"><table border="0" cellpadding="0" cellspacing="0"><caption>Blackjack.js -- Entering amount of money to bet</caption><tbody><tr><td class="gutter"><div class="line number41 index0 alt2">41</div><div class="line number42 index1 alt1">42</div><div class="line number43 index2 alt2">43</div><div class="line number44 index3 alt1">44</div><div class="line number45 index4 alt2">45</div><div class="line number46 index5 alt1">46</div><div class="line number47 index6 alt2">47</div><div class="line number48 index7 alt1">48</div><div class="line number49 index8 alt2">49</div><div class="line number50 index9 alt1">50</div><div class="line number51 index10 alt2">51</div><div class="line number52 index11 alt1">52</div><div class="line number53 index12 alt2">53</div><div class="line number54 index13 alt1">54</div><div class="line number55 index14 alt2">55</div><div class="line number56 index15 alt1">56</div><div class="line number57 index16 alt2">57</div><div class="line number58 index17 alt1">58</div><div class="line number59 index18 alt2">59</div><div class="line number60 index19 alt1">60</div><div class="line number61 index20 alt2">61</div><div class="line number62 index21 alt1">62</div><div class="line number63 index22 alt2">63</div><div class="line number64 index23 alt1">64</div><div class="line number65 index24 alt2">65</div><div class="line number66 index25 alt1">66</div></td><td id="codeContainer_583890" class="code"><div id="container_583890" class="container"><div class="line number41 index0 alt2"><code class="jscript keyword">function</code> <code class="jscript plain">chooseMoney() {</code></div><div class="line number42 index1 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">yourMoneyTotal = parseInt(document.blackJack.yourMoneyTotal.value)</code></div><div class="line number43 index2 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">yourMoneyBet = 0</code></div><div class="line number44 index3 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number45 index4 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">while</code> <code class="jscript plain">((yourMoneyBet == 0) || (yourMoneyBet == </code><code class="jscript string">""</code><code class="jscript plain">) || (yourMoneyBet &lt; 1) || (yourMoneyBet &gt; yourMoneyTotal) || (isNaN(yourMoneyBet)) || (yourMoneyBet.indexOf(</code><code class="jscript string">"."</code><code class="jscript plain">) &gt; 0)) {</code></div><div class="line number46 index5 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">yourMoneyBet = prompt(</code><code class="jscript string">"How much money do you want to bet?"</code><code class="jscript plain">,</code><code class="jscript string">""</code><code class="jscript plain">)</code></div><div class="line number47 index6 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.potMoney.value = yourMoneyBet</code></div><div class="line number48 index7 alt1">&nbsp;</div><div class="line number49 index8 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyBet == </code><code class="jscript keyword">null</code><code class="jscript plain">) {</code></div><div class="line number50 index9 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.yourMoney[0].checked=</code><code class="jscript keyword">true</code><code class="jscript plain">;</code></div><div class="line number51 index10 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">yourMoneyBet = document.blackJack.yourMoney[0].value</code></div><div class="line number52 index11 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number53 index12 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">((yourMoneyBet == </code><code class="jscript string">""</code><code class="jscript plain">) || (yourMoneyBet == </code><code class="jscript string">"0"</code><code class="jscript plain">) || (yourMoneyBet &lt; </code><code class="jscript string">"1"</code><code class="jscript plain">)) {</code></div><div class="line number54 index13 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">alert(</code><code class="jscript string">"You must bet at least $1."</code><code class="jscript plain">)</code></div><div class="line number55 index14 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number56 index15 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">(isNaN(yourMoneyBet)) {</code></div><div class="line number57 index16 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">alert(</code><code class="jscript string">"You cannot bet something that is not a number, that includes not adding in $ sign."</code><code class="jscript plain">)</code></div><div class="line number58 index17 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number59 index18 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyBet &gt; yourMoneyTotal) {</code></div><div class="line number60 index19 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">alert(</code><code class="jscript string">"You cannot bet more money than you have."</code><code class="jscript plain">)</code></div><div class="line number61 index20 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number62 index21 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyBet.indexOf(</code><code class="jscript string">"."</code><code class="jscript plain">) &gt; 0) {</code></div><div class="line number63 index22 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">alert(</code><code class="jscript string">"You cannot bet a number with a decimal in it."</code><code class="jscript plain">)</code></div><div class="line number64 index23 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number65 index24 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number66 index25 alt1"><code class="jscript plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_583890" class="displaysourcecode" >
+				function chooseMoney() {
+					yourMoneyTotal = parseInt(document.blackJack.yourMoneyTotal.value)
+					yourMoneyBet = 0
+					
+					while ((yourMoneyBet == 0) || (yourMoneyBet == "") || (yourMoneyBet &lt; 1) || (yourMoneyBet &gt; yourMoneyTotal) || (isNaN(yourMoneyBet)) || (yourMoneyBet.indexOf(".") &gt; 0)) {
+					yourMoneyBet = prompt("How much money do you want to bet?","")
+					document.blackJack.potMoney.value = yourMoneyBet
+
+						if (yourMoneyBet == null) {
+							document.blackJack.yourMoney[0].checked=true;
+							yourMoneyBet = document.blackJack.yourMoney[0].value
+						}
+						else if ((yourMoneyBet == "") || (yourMoneyBet == "0") || (yourMoneyBet &lt; "1")) {
+							alert("You must bet at least $1.")
+						}
+						else if (isNaN(yourMoneyBet)) {
+							alert("You cannot bet something that is not a number, that includes not adding in $ sign.")
+						}
+						else if (yourMoneyBet &gt; yourMoneyTotal) {
+							alert("You cannot bet more money than you have.")
+						}
+						else if (yourMoneyBet.indexOf(".") &gt; 0) {
+							alert("You cannot bet a number with a decimal in it.")
+						}
+					}
+				}
+				</pre>
+				<p>
+					If there is not much money left, the computer will select the highest possible bet.
+					When the player has less than $10, the player must enter in an amount.
+				</p>
+				<div id="highlighterMainDiv_690639" class="syntaxhighlighter jscript"><table border="0" cellpadding="0" cellspacing="0"><caption>Blackjack.js -- Check amount of money left</caption><tbody><tr><td class="gutter"><div class="line number215 index0 alt2">215</div><div class="line number216 index1 alt1">216</div><div class="line number217 index2 alt2">217</div><div class="line number218 index3 alt1">218</div><div class="line number219 index4 alt2">219</div><div class="line number220 index5 alt1">220</div><div class="line number221 index6 alt2">221</div><div class="line number222 index7 alt1">222</div><div class="line number223 index8 alt2">223</div><div class="line number224 index9 alt1">224</div><div class="line number225 index10 alt2">225</div><div class="line number226 index11 alt1">226</div><div class="line number227 index12 alt2">227</div><div class="line number228 index13 alt1">228</div><div class="line number229 index14 alt2">229</div><div class="line number230 index15 alt1">230</div><div class="line number231 index16 alt2">231</div><div class="line number232 index17 alt1">232</div><div class="line number233 index18 alt2">233</div><div class="line number234 index19 alt1">234</div><div class="line number235 index20 alt2">235</div><div class="line number236 index21 alt1">236</div></td><td id="codeContainer_690639" class="code"><div id="container_690639" class="container"><div class="line number215 index0 alt2"><code class="jscript keyword">function</code> <code class="jscript plain">checkMoney() {</code></div><div class="line number216 index1 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">yourMoneyTotal = parseInt(document.blackJack.yourMoneyTotal.value)</code></div><div class="line number217 index2 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">yourMoneyBet = parseInt(document.blackJack.potMoney.value)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number218 index3 alt1">&nbsp;</div><div class="line number219 index4 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyTotal &lt;= 50 &amp;&amp; yourMoneyTotal &gt; 25) {</code></div><div class="line number220 index5 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.yourMoney[1].checked=</code><code class="jscript keyword">true</code><code class="jscript plain">;</code></div><div class="line number221 index6 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.potMoney.value = document.blackJack.yourMoney[1].value</code></div><div class="line number222 index7 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number223 index8 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyTotal &lt;= 25 &amp;&amp; yourMoneyTotal &gt; 10) {</code></div><div class="line number224 index9 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.yourMoney[0].checked=</code><code class="jscript keyword">true</code><code class="jscript plain">;</code></div><div class="line number225 index10 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.potMoney.value = document.blackJack.yourMoney[0].value</code></div><div class="line number226 index11 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number227 index12 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyTotal &lt;= 10 &amp;&amp; yourMoneyTotal &gt; 0) {</code></div><div class="line number228 index13 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.yourMoney[4].checked=</code><code class="jscript keyword">true</code><code class="jscript plain">;</code></div><div class="line number229 index14 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">chooseMoney();</code></div><div class="line number230 index15 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.yourMoney[0].checked=</code><code class="jscript keyword">false</code><code class="jscript plain">;</code></div><div class="line number231 index16 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">document.blackJack.yourMoney[4].checked=</code><code class="jscript keyword">true</code><code class="jscript plain">;</code></div><div class="line number232 index17 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number233 index18 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript keyword">else</code> <code class="jscript keyword">if</code> <code class="jscript plain">(yourMoneyTotal == 0 || yourMoneyTotal &lt; 0) {</code></div><div class="line number234 index19 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">playAgain();</code></div><div class="line number235 index20 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">}</code></div><div class="line number236 index21 alt1"><code class="jscript plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_690639" class="displaysourcecode" >
+				function checkMoney() {
+					yourMoneyTotal = parseInt(document.blackJack.yourMoneyTotal.value)
+					yourMoneyBet = parseInt(document.blackJack.potMoney.value)      
+
+					if (yourMoneyTotal &lt;= 50 &amp;&amp; yourMoneyTotal &gt; 25) {
+						document.blackJack.yourMoney[1].checked=true;
+						document.blackJack.potMoney.value = document.blackJack.yourMoney[1].value
+					}
+					else if (yourMoneyTotal &lt;= 25 &amp;&amp; yourMoneyTotal &gt; 10) {
+						document.blackJack.yourMoney[0].checked=true;
+						document.blackJack.potMoney.value = document.blackJack.yourMoney[0].value
+					}
+					else if (yourMoneyTotal &lt;= 10 &amp;&amp; yourMoneyTotal &gt; 0) {
+						document.blackJack.yourMoney[4].checked=true;
+						chooseMoney();
+						document.blackJack.yourMoney[0].checked=false;
+						document.blackJack.yourMoney[4].checked=true;
+					}
+					else if (yourMoneyTotal == 0 || yourMoneyTotal &lt; 0) {
+						playAgain();
+					}
+				}
+				</pre>
+
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4><a href="about.html" class="submenuHeading"> About </a></h4>
+				<br>
+				<h4><a href="paint.html" class="submenuHeading"> Paint Program </a></h4>
+				<ul class="ulMenu"><a href="paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="paint_layers.html" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="paint_menu.html" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="paint_source.html" class="menuLinks"> Source Code </a></ul>
+				<br>
+				<h4><a href="blackjack.html" class="submenuHeading"> Blackjack </a></h4>
+				<ul class="ulMenu"><a href="bj_gameplay.html" class="menuLinks"> Gameplay </a></ul>
+				<ul class="ulMenu"><a href="bj_money.html" class="menuLinks selectedSubmenu"> Money </a></ul>
+				<ul class="ulMenu"><a href="bj_source.html" class="menuLinks"> Source Code </a></ul>
+			</div>
+		</div>
+	</BODY>
+</HTML>
