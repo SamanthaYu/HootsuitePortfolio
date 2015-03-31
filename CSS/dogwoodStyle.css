@@ -187,7 +187,7 @@ div.selectedMenu {
 	width: -o-calc(100% - 225px); 		/* Opera */
 	width: -webkit-calc(100% - 225px); 	/* Google, Safari */
 	width: -moz-calc(100% - 225px); 	/* Firefox */
-	background-color: #15997E;
+	background-color: #26B59D;
 	vertical-align: middle;
 	margin-right: 10px;
 	padding: 15px;
