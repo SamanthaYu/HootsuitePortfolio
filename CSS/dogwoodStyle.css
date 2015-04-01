@@ -70,14 +70,13 @@ p {
 a {
 	color: #FFFFFF;
 }
+a:hover {
+	color: #96F04F;
+}
 video {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-.javaError {
-	border: 3px solid #000000;
-	background: #E0E0E0;
 }
 .menuButton {
 	display: inline-block;
@@ -129,8 +128,12 @@ span.method {
 	text-align: center;
 	width: 50%;
 }
-.headingLink {
+a.headingLink {
+	color: #000000;
 	text-decoration: none;
+}
+.headingLink:hover {
+	color: #0C4057;
 }
 .submenuHeading {
 	text-decoration: none;
@@ -139,7 +142,7 @@ span.method {
 	color: #3EC7C5;
 }
 .submenuHeading:hover {
-	color: #3EC7C5;
+	color: #96F04F;
 }
 div.selectedMenu {
 	border-bottom: thick solid #3EC7C5;
@@ -154,6 +157,10 @@ div.selectedMenu {
 	margin-bottom: 10px;
 }
 .downloadLink {
+	color: #000000;
+	text-decoration: none;
+}
+.downloadLink:hover {
 	color: #000000;
 	text-decoration: none;
 }
@@ -220,4 +227,8 @@ div.selectedMenu {
 	vertical-align: middle;
 	padding: 15px;
 	margin: 0;
+}
+#downloadNotCentered {
+	margin: 0;
+	display: inline-block;
 }
