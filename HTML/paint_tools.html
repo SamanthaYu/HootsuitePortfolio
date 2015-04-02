@@ -1,0 +1,94 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="../CSS/dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	
+		<script type="text/javascript" src="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/scripts/sh-v3.0-min.js"></script>
+		<!-- Same stylesheet as http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreDefault.css but with different colors and without the vertical scrollbar on the side -->
+		<link type="text/css" rel="stylesheet" href="../CSS/abjlkSyntaxHighlighter.css"/>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle"><a href="../index.html" id="indexBanner">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</a></div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><a href="about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton"><a href="blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Paint Tools </h5> <hr>
+				<p>
+					Instead of using the <span class="class">Graphics</span> class, I used its subclass, <span class="class">Graphics2D</span>, to create the graphical output.
+					The <span class="class">Graphics2D's</span> <span class="method">setStroke()</span> made the pencil tool rounder.
+					The pencil tool now has fewer gaps in the drawn lines than if the pencil consisted of drawing connected ovals together.
+				</p>
+				<div id="highlighterMainDiv_505624" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>Tools.java -- Pencil</caption><tbody><tr><td class="gutter"><div class="line number33 index0 alt2">33</div><div class="line number34 index1 alt1">34</div><div class="line number35 index2 alt2">35</div><div class="line number36 index3 alt1">36</div></td><td id="codeContainer_505624" class="code"><div id="container_505624" class="container"><div class="line number33 index0 alt2"><code class="java keyword">private</code> <code class="java keyword">void</code> <code class="java plain">pencil(</code><code class="java keyword">int</code> <code class="java plain">oldX, </code><code class="java keyword">int</code> <code class="java plain">oldY, </code><code class="java keyword">int</code> <code class="java plain">newX, </code><code class="java keyword">int</code> <code class="java plain">newY) {&nbsp;&nbsp; </code><code class="java comments">// Pencil tool with a rounded stroke</code></div><div class="line number34 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cgBuffer.setStroke(</code><code class="java keyword">new</code> <code class="java plain">BasicStroke(menuBar.getStrokeSize(), BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));</code></div><div class="line number35 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cgBuffer.drawLine(oldX,oldY,newX,newY);</code></div><div class="line number36 index3 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_505624" class="displaysourcecode" >
+				private void pencil(int oldX, int oldY, int newX, int newY) {   // Pencil tool with a rounded stroke
+					cgBuffer.setStroke(new BasicStroke(menuBar.getStrokeSize(), BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+					cgBuffer.drawLine(oldX,oldY,newX,newY);
+				}
+				</pre>
+
+				<p>
+					The <span class="method">setStroke()</span> also gave the brush tool unique edges by creating a <span class="class">BasicStroke</span> object with a capped butt (ends lines with no added decoration) and a miter join (extending the outside edges until they meet).
+				</p>
+				<div id="highlighterMainDiv_278714" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>Tools.java -- Brush</caption><tbody><tr><td class="gutter"><div class="line number38 index0 alt1">38</div><div class="line number39 index1 alt2">39</div><div class="line number40 index2 alt1">40</div><div class="line number41 index3 alt2">41</div></td><td id="codeContainer_278714" class="code"><div id="container_278714" class="container"><div class="line number38 index0 alt1"><code class="java keyword">private</code> <code class="java keyword">void</code> <code class="java plain">brush(</code><code class="java keyword">int</code> <code class="java plain">oldX, </code><code class="java keyword">int</code> <code class="java plain">oldY, </code><code class="java keyword">int</code> <code class="java plain">newX, </code><code class="java keyword">int</code> <code class="java plain">newY) {&nbsp;&nbsp;&nbsp; </code><code class="java comments">// Brush tool (has "missing" lines in its stroke at a curve)</code></div><div class="line number39 index1 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cgBuffer.setStroke(</code><code class="java keyword">new</code> <code class="java plain">BasicStroke(menuBar.getStrokeSize(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER)); </code></div><div class="line number40 index2 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cgBuffer.drawLine(oldX,oldY,newX,newY);</code></div><div class="line number41 index3 alt2"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_278714" class="displaysourcecode" >
+				private void brush(int oldX, int oldY, int newX, int newY) {    // Brush tool (has "missing" lines in its stroke at a curve)
+					cgBuffer.setStroke(new BasicStroke(menuBar.getStrokeSize(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER)); 
+					cgBuffer.drawLine(oldX,oldY,newX,newY);
+				}
+				</pre>
+
+				<p>
+					The spray tool consists of several tiny circles drawn randomly within the user requested stroke size.
+				</p>
+				
+				<div id="highlighterMainDiv_132234" class="syntaxhighlighter java"><table border="0" cellpadding="0" cellspacing="0"><caption>Tools.java -- Spray</caption><tbody><tr><td class="gutter"><div class="line number43 index0 alt2">43</div><div class="line number44 index1 alt1">44</div><div class="line number45 index2 alt2">45</div><div class="line number46 index3 alt1">46</div><div class="line number47 index4 alt2">47</div><div class="line number48 index5 alt1">48</div><div class="line number49 index6 alt2">49</div><div class="line number50 index7 alt1">50</div><div class="line number51 index8 alt2">51</div></td><td id="codeContainer_132234" class="code"><div id="container_132234" class="container"><div class="line number43 index0 alt2"><code class="java keyword">private</code> <code class="java keyword">void</code> <code class="java plain">spray(</code><code class="java keyword">int</code> <code class="java plain">newX, </code><code class="java keyword">int</code> <code class="java plain">newY) {&nbsp;&nbsp;&nbsp; </code><code class="java comments">// Spray can tool</code></div><div class="line number44 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Random rand = </code><code class="java keyword">new</code> <code class="java plain">Random();</code></div><div class="line number45 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number46 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">for</code> <code class="java plain">(</code><code class="java keyword">int</code> <code class="java plain">k=</code><code class="java value">1</code><code class="java plain">; k&lt;</code><code class="java value">2</code><code class="java plain">*menuBar.getStrokeSize(); k++) {&nbsp;&nbsp; </code><code class="java comments">// Several tiny random circles are painted around the current coordinate</code></div><div class="line number47 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">randX = rand.nextInt(menuBar.getStrokeSize()) + newX - (</code><code class="java keyword">int</code><code class="java plain">) menuBar.getStrokeSize()/</code><code class="java value">2</code><code class="java plain">;</code></div><div class="line number48 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">randY = rand.nextInt(menuBar.getStrokeSize()) + newY - (</code><code class="java keyword">int</code><code class="java plain">) menuBar.getStrokeSize()/</code><code class="java value">2</code><code class="java plain">;</code></div><div class="line number49 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">cgBuffer.fillOval(randX, randY, (</code><code class="java keyword">int</code><code class="java plain">) </code><code class="java value">3</code><code class="java plain">, (</code><code class="java keyword">int</code><code class="java plain">) </code><code class="java value">3</code><code class="java plain">);&nbsp; </code></div><div class="line number50 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number51 index8 alt2"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+				<pre id="presourcecode_132234" class="displaysourcecode" >
+				private void spray(int newX, int newY) {    // Spray can tool
+					Random rand = new Random();
+					 
+					for (int k=1; k&lt;2*menuBar.getStrokeSize(); k++) {   // Several tiny random circles are painted around the current coordinate
+						randX = rand.nextInt(menuBar.getStrokeSize()) + newX - (int) menuBar.getStrokeSize()/2;
+						randY = rand.nextInt(menuBar.getStrokeSize()) + newY - (int) menuBar.getStrokeSize()/2;
+						cgBuffer.fillOval(randX, randY, (int) 3, (int) 3);  
+					}
+				}
+				</pre>
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4><a href="about.html" class="submenuHeading"> About </a></h4>
+				<br>
+				<h4><a href="paint.html" class="submenuHeading"> Paint Program </a></h4>
+				<ul class="ulMenu"><a href="paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="paint_layers.html" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="paint_menu.html" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="paint_tools.html" class="menuLinks selectedSubmenu"> Tools </a></ul>
+				<ul class="ulMenu"><a href="paint_source.html" class="menuLinks"> Source Code </a></ul>
+				<br>
+				<h4><a href="blackjack.html" class="submenuHeading"> Blackjack </a></h4>
+				<ul class="ulMenu"><a href="bj_gameplay.html" class="menuLinks"> Gameplay </a></ul>
+				<ul class="ulMenu"><a href="bj_money.html" class="menuLinks"> Money </a></ul>
+				<ul class="ulMenu"><a href="bj_source.html" class="menuLinks"> Source Code </a></ul>
+			</div>
+		</div>
+		<script type="text/javascript">SyntaxHighlighter.initialize();</script>
+	</BODY>
+</HTML>

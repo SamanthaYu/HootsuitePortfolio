@@ -6,61 +6,42 @@
 		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 		<STYLE>
 			.halfBody {
-				height: calc(50% - 5px);
-				height: -o-calc(50% - 5px); /* opera */
-				height: -webkit-calc(50% - 5px); /* google, safari */
-				height: -moz-calc(50% - 5px); /* firefox */
+				height: 50%;
 				display: block;
-				width: 100%;
 				overflow: hidden;
+				vertical-align: middle;
 			}
-			.divScreenshot {
+			.description:before {
 				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			.screenshot {
 				width: calc(50% - 5px);
 				width: -o-calc(50% - 5px); /* opera */
 				width: -webkit-calc(50% - 5px); /* google, safari */
 				width: -moz-calc(50% - 5px); /* firefox */
-			}
-			.screenshot {
-				height: 100%;
 				display: inline-block;
-			}
-			.description:before {
 				vertical-align: middle;
-				content: "";
-				display: inline-block;
-				height: 100%;
 			}
-			.description {
+			.description{
+				display: inline-block;
 				text-align: center;
 				width: 50%;
 				height: 100%;
-				display: inline-block;
-				vertical-align: top;
-			}
-			.spanDescription {
 				vertical-align: middle;
-				display: inline-block;
 			}
 			#paintHalf {
-				margin-bottom: 10px;
 				background: -webkit-linear-gradient(60deg, #0C4057, #26B59D); /* For Safari 5.1 to 6.0 */
 				background: -o-linear-gradient(60deg, #0C4057, #26B59D); /* For Opera 11.1 to 12.0 */
 				background: -moz-linear-gradient(60deg, #0C4057), #26B59D); /* For Firefox 3.6 to 15 */
 				background: linear-gradient(60deg, #0C4057, #26B59D); /* Standard syntax */
 			}
 			#bjHalf {
-				margin-top: 10px;
 				background: -webkit-linear-gradient(60deg, #26B59D, #0C4057); /* For Safari 5.1 to 6.0 */
 				background: -o-linear-gradient(60deg, #26B59D, #0C4057); /* For Opera 11.1 to 12.0 */
 				background: -moz-linear-gradient(60deg, #26B59D), #0C4057); /* For Firefox 3.6 to 15 */
 				background: linear-gradient(60deg, #26B59D, #0C4057); /* Standard syntax */
-			}
-			#paintScreenshot {
-				float: left;
-			}
-			#bjScreenshot {
-				float: right;
 			}
 		</STYLE>
 	<HEAD>
@@ -85,28 +66,26 @@
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
 				<div class="halfBody" id="paintHalf">
-					<div class="divScreenshot"><a href="HTML/paint.html"><img src="Images/PaintScreenshot.png" alt="Paint Program" class="screenshot" id="paintScreenshot"></a></div>
-					<div class="description"><span class="spanDescription">
+					<a href="HTML/paint.html"><img src="Images/PaintScreenshot.png" alt="Paint Program" class="screenshot" id="paintScreenshot"></a>
+					<div class="description">
 						<h5><a href="HTML/paint.html" class="headingLink"> Paint Program: Java </a></h5><hr>
 						<p>
 							I created this Paint Program in <b>Java</b> for my AP Computer Science 12 class and is built around the concept of <a href="HTML/paint_doubleBuffering.html">double buffering</a>.
-							My Paint Program achieved more than the minimum requirements of freehand drawing and restricting the drawing to the canvas.
-							Instead of drawing with just five possible colors, I implemented a <a href="HTML/paint_colors.html">RGB color picker</a>.
-							The paint tools come not just in three different sizes but in a user-requested size and in different styles.
 							When I implemented the <a href="HTML/paint_layers.html">layers</a>, I had to change how I was approaching the double buffering concept.
+							My Paint Program went beyond the minimum requirements by using classes and concepts that were not taught in the course.
 						</p>
-					</span></div>
+					</div>
 				</div>
 				<div class="halfBody" id="bjHalf">
-					<div class="description"><span class="spanDescription">
+					<div class="description">
 						<h5><a href="HTML/blackjack.html" class="headingLink"> Blackjack Game: JavaScript </a></h5><hr>
 						<p>
-							I created a Blackjack game in <b>JavaScript</b> for my Computers 11 class.
+							I created a Blackjack game in <b>JavaScript</b> for my ICT: Modular Survey 11 class.
 							In my version of Blackjack, the player can <a href="HTML/bj_money.html">select their bet</a> from pre-determined values, going all in, or entering in their own amount.
-							I considered several possible outcomes of the user entering invalid amounts, pressing "cancel", having less money than the standard bets, or the player goes bankrupt.
+							I considered several possible outcomes, such as the user entering invalid amounts, pressing "cancel", having less money than the standard bets, or when the player goes bankrupt.
 						</p>
-					</span></div>
-					<div class="divScreenshot"><a href="Blackjack"><img src="Images/Blackjack3a.jpg" alt="Blackjack Game" class="screenshot" id="bjScreenshot"></a></div>
+					</div>
+					<a href="HTML/blackjack.html"><img src="Images/Blackjack3a.jpg" alt="Blackjack Game" class="screenshot" id="bjScreenshot"></a>
 				</div>
 			</div>
 			<div class="bodyContent" id="sidebar">
@@ -118,6 +97,7 @@
 				<ul class="ulMenu"><a href="HTML/paint_layers.html" class="menuLinks"> Layers </a></ul>
 				<ul class="ulMenu"><a href="HTML/paint_menu.html" class="menuLinks"> Menu </a></ul>
 				<ul class="ulMenu"><a href="HTML/paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="HTML/paint_tools.html" class="menuLinks"> Tools </a></ul>
 				<ul class="ulMenu"><a href="HTML/paint_source.html" class="menuLinks"> Source Code </a></ul>
 				<br>
 				<h4><a href="HTML/blackjack.html" class="submenuHeading"> Blackjack </a></h4>

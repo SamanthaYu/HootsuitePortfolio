@@ -31,7 +31,7 @@
 			<div class="bodyContent" id="mainBody">
 				<h5> Money </h5> <hr>
 				<p>
-					The player can select the amount of money they want to place as a bet by selecting radio buttons.
+					The player can decide the size of their bet by selecting radio buttons.
 					For the "Choose your own value", different alerts pop up if the player enters an invalid amount, less than 1, more than they have, or has a decimal in it.
 					If the player clicks cancel, it automatically selects the first radio button.
 				</p>
@@ -42,8 +42,8 @@
 					yourMoneyBet = 0
 					
 					while ((yourMoneyBet == 0) || (yourMoneyBet == "") || (yourMoneyBet &lt; 1) || (yourMoneyBet &gt; yourMoneyTotal) || (isNaN(yourMoneyBet)) || (yourMoneyBet.indexOf(".") &gt; 0)) {
-					yourMoneyBet = prompt("How much money do you want to bet?","")
-					document.blackJack.potMoney.value = yourMoneyBet
+						yourMoneyBet = prompt("How much money do you want to bet?","")
+						document.blackJack.potMoney.value = yourMoneyBet
 
 						if (yourMoneyBet == null) {
 							document.blackJack.yourMoney[0].checked=true;
@@ -104,6 +104,7 @@
 				<ul class="ulMenu"><a href="paint_layers.html" class="menuLinks"> Layers </a></ul>
 				<ul class="ulMenu"><a href="paint_menu.html" class="menuLinks"> Menu </a></ul>
 				<ul class="ulMenu"><a href="paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="paint_tools.html" class="menuLinks"> Tools </a></ul>
 				<ul class="ulMenu"><a href="paint_source.html" class="menuLinks"> Source Code </a></ul>
 				<br>
 				<h4><a href="blackjack.html" class="submenuHeading"> Blackjack </a></h4>
@@ -112,5 +113,6 @@
 				<ul class="ulMenu"><a href="bj_source.html" class="menuLinks"> Source Code </a></ul>
 			</div>
 		</div>
+		<script type="text/javascript">SyntaxHighlighter.initialize();</script>
 	</BODY>
 </HTML>

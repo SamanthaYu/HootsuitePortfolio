@@ -54,7 +54,7 @@ h5 {	/* Page headings; eg "Paint Program"; "Colours" */
 	text-align: center;
 }
 hr {
-	border: 2px #FFFFFF inset;
+	border: 2px #FFFFFF solid;
 }
 div {
 	margin: 0;
@@ -147,21 +147,19 @@ a.headingLink {
 div.selectedMenu {
 	border-bottom: thick solid #3EC7C5;
 }
-.download {
+.downloadLink {
 	font-family: 'Georgia', serif;
 	font-size: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.downloadLink {
-	color: #000000;
+	display: inline-block;
+	color: #38DCF5;
+	background-color: #005B8C;
+	border: 3px solid #140D91;
 	text-decoration: none;
+	border-radius: 10px;
 }
 .downloadLink:hover {
 	color: #000000;
+	background-color: #4FB0F0;
 	text-decoration: none;
 }
 #banner {
@@ -227,8 +225,4 @@ div.selectedMenu {
 	vertical-align: middle;
 	padding: 15px;
 	margin: 0;
-}
-#downloadNotCentered {
-	margin: 0;
-	display: inline-block;
 }

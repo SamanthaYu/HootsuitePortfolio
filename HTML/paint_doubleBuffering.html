@@ -30,9 +30,8 @@
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
 				<h5> Double Buffering </h5> <hr>
-				<p> The process of directly painting an image to the screen then completely erasing that image before the next image is painted causes flickering.
-					<a href="https://docs.oracle.com/javase/tutorial/extra/fullscreen/doublebuf.html" target="_blank"> Double buffering </a> avoids this flickering by creating an off-screen image while another image is painted to the screen.
-					The off-screen image is later transferred to the screen and a new off-screen image is created.
+				<p> The process of directly painting an image to the screen, completely erasing that image, and painting a new image to the screen causes flickering.
+					<a href="https://docs.oracle.com/javase/tutorial/extra/fullscreen/doublebuf.html" target="_blank"> Double buffering </a> avoids this flickering by creating an off-screen image that is later transferred to the screen.
 				</p> <br>
 				<p>
 					When the user draws on the canvas, <span class="method">useTool()</span> grabs the current off-screen layer and creates a <span class="class">Graphics2D</span> context associated with that layer.
@@ -84,6 +83,7 @@
 				<ul class="ulMenu"><a href="paint_layers.html" class="menuLinks"> Layers </a></ul>
 				<ul class="ulMenu"><a href="paint_menu.html" class="menuLinks"> Menu </a></ul>
 				<ul class="ulMenu"><a href="paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="paint_tools.html" class="menuLinks"> Tools </a></ul>
 				<ul class="ulMenu"><a href="paint_source.html" class="menuLinks"> Source Code </a></ul>
 				<br>
 				<h4><a href="blackjack.html" class="submenuHeading"> Blackjack </a></h4>
