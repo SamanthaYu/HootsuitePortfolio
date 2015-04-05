@@ -1,0 +1,402 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="../CSS/dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="../CSS/javadoc.css" title="Style">
+		<script type="text/javascript" src="../JavaScript/javadoc.js"></script>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle"><a href="../index.html" id="indexBanner">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</a></div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><a href="../HTML/about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="../HTML/paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton"><a href="../HTML/blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Javadoc: Layers Class </h5> <hr>
+<div class="contentContainer">
+<ul class="jdoc_ul inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>Layers</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">Layers</span>
+extends java.lang.Object</pre>
+<div class="block">This Layers class controls how the layers are created and deleted, and allows the user to move to a different layer.
+ 
+ <br><br><b> Submitted to AP Computer Science 12:</b> 2015-01-27
+ <br><b> Last modified:</b> 2015-04-04
+ <br><b> Author:</b> Samantha Yu</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="field.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#changeLayer">changeLayer</a></span></code>
+<div class="block">Variables used as "switches" during program execution.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#cLayerNum">cLayerNum</a></span></code>
+<div class="block">Index of imageArray allows access to the current layer and is used to make a graphical context for that layer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#deleteLayer">deleteLayer</a></span></code>
+<div class="block">Variables used as "switches" during program execution.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private java.util.ArrayList&lt;java.awt.image.BufferedImage&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#imageArray">imageArray</a></span></code>
+<div class="block">An ArrayList stores BufferedImages of each layer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#paintLab">paintLab</a></span></code>
+<div class="block">A PaintApp object has only one instance and allows this class to access its non-static methods and fields.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="constructor.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#Layers-PaintApp-">Layers</a></span>(<a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab)</code>
+<div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="method.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a class="jdoc_a" href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a class="jdoc_a" href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#deleteLayer--">deleteLayer</a></span>()</code>
+<div class="block">When the user has decided to delete a layer, the method checks that the user-requested layer is not the only layer left.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#getcLayerNum--">getcLayerNum</a></span>()</code>
+<div class="block">Returns the current index of imageArray</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>java.util.ArrayList&lt;java.awt.image.BufferedImage&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#getImageArray--">getImageArray</a></span>()</code>
+<div class="block">Returns the ArrayList of BufferedImages, which store the layers</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#newLayer--">newLayer</a></span>()</code>
+<div class="block">This method creates a new layer after the current layer by adding a new BufferedImage after the index cLayerNum to the imageArray.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#nextLayer--">nextLayer</a></span>()</code>
+<div class="block">When the user switches to the next layer, the method first checks whether the new index exists in the the imageArray.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#previousLayer--">previousLayer</a></span>()</code>
+<div class="block">When the user switches to the previous layer, the method first checks whether the new index exists in the the imageArray.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Layers.html#setcLayerNum-int-">setcLayerNum</a></span>(int&nbsp;cNum)</code>
+<div class="block">This method updates the current index of imageArray.</div>
+</td>
+</tr>
+</table>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="field.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Field Detail</h3>
+<a class="jdoc_a" name="paintLab">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">paintLab</h4>
+<pre><a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a> paintLab</pre>
+<div class="block">A PaintApp object has only one instance and allows this class to access its non-static methods and fields. 
+ I did not make PaintApp's fields static, because those fields refer to the one and same object, the paint program.
+ I did not want to place the Layer's methods into PaintApp, because those methods belong in its own separate category.
+ So, this Layers class must be able to access and change the graphical output of PaintApp such as the methods like repaint().</div>
+</li>
+</ul>
+<a class="jdoc_a" name="imageArray">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">imageArray</h4>
+<pre>private&nbsp;java.util.ArrayList&lt;java.awt.image.BufferedImage&gt; imageArray</pre>
+<div class="block">An ArrayList stores BufferedImages of each layer.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="cLayerNum">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">cLayerNum</h4>
+<pre>private&nbsp;int cLayerNum</pre>
+<div class="block">Index of imageArray allows access to the current layer and is used to make a graphical context for that layer.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="deleteLayer">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">deleteLayer</h4>
+<pre>public&nbsp;boolean deleteLayer</pre>
+<div class="block">Variables used as "switches" during program execution.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="changeLayer">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">changeLayer</h4>
+<pre>public&nbsp;boolean changeLayer</pre>
+<div class="block">Variables used as "switches" during program execution.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="constructor.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Constructor Detail</h3>
+<a class="jdoc_a" name="Layers-PaintApp-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">Layers</h4>
+<pre>public&nbsp;Layers(<a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab)</pre>
+<div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pLab</code> - The driver class, PaintApp, passes itself to the Menu() constructor to ensure that its Menu object has sufficient access to its methods and variables.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="method.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Method Detail</h3>
+<a class="jdoc_a" name="newLayer--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">newLayer</h4>
+<pre>public&nbsp;void&nbsp;newLayer()</pre>
+<div class="block">This method creates a new layer after the current layer by adding a new BufferedImage after the index cLayerNum to the imageArray.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="previousLayer--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">previousLayer</h4>
+<pre>public&nbsp;void&nbsp;previousLayer()</pre>
+<div class="block">When the user switches to the previous layer, the method first checks whether the new index exists in the the imageArray.
+ If a previous layer does not exist, a notification pops up that erases some of the graphics.
+ repaint() is called to paint the current layer's graphics on top and ensure that the graphics do not accidentally disappear.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="nextLayer--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">nextLayer</h4>
+<pre>public&nbsp;void&nbsp;nextLayer()</pre>
+<div class="block">When the user switches to the next layer, the method first checks whether the new index exists in the the imageArray.
+ If the next layer does not exist, a notification pops up the erases some of the graphics.
+ repaint() is called to paint the current layer's graphics on top and ensure that the graphics do not accidentally disappear.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="deleteLayer--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">deleteLayer</h4>
+<pre>public&nbsp;void&nbsp;deleteLayer()</pre>
+<div class="block">When the user has decided to delete a layer, the method checks that the user-requested layer is not the only layer left.
+ Next, the layer is set to a blank BufferedImage
+ When paint() is called, the canvas is cleared with this blank image before the other layers are drawn on top.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="getImageArray--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">getImageArray</h4>
+<pre>public&nbsp;java.util.ArrayList&lt;java.awt.image.BufferedImage&gt;&nbsp;getImageArray()</pre>
+<div class="block">Returns the ArrayList of BufferedImages, which store the layers</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>imageArray</dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="getcLayerNum--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">getcLayerNum</h4>
+<pre>public&nbsp;int&nbsp;getcLayerNum()</pre>
+<div class="block">Returns the current index of imageArray</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>cLayerNum</dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="setcLayerNum-int-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">setcLayerNum</h4>
+<pre>public&nbsp;void&nbsp;setcLayerNum(int&nbsp;cNum)</pre>
+<div class="block">This method updates the current index of imageArray.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>cNum</code> - cLayerNum is set to the parameter passed to setcLayerNum.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>			
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4><a href="../HTML/about.html" class="submenuHeading"> About </a></h4>
+				<br>
+				<h4><a href="../HTML/paint.html" class="submenuHeading"> Paint Program </a></h4>
+				<ul class="ulMenu"><a href="../HTML/paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_javadoc_layers.html" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_menu.html" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_tools.html" class="menuLinks"> Tools </a></ul>
+				<ul class="ulMenu"><a href="javadoc_paintApp.html" class="menuLinks selectedSubmenu"> Javadoc</a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_paintApp.html" class="jdocLinks"> PaintApp Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_javadoc_layers.html" class="jdocLinks selected_jdocMenu"> Layers Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_menu.html" class="jdocLinks"> Menu Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_tools.html" class="jdocLinks"> Tools Class </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_source.html" class="menuLinks"> Source Code </a></ul>
+				<br>
+				<h4><a href="../HTML/blackjack.html" class="submenuHeading"> Blackjack </a></h4>
+				<ul class="ulMenu"><a href="../HTML/bj_gameplay.html" class="menuLinks"> Gameplay </a></ul>
+				<ul class="ulMenu"><a href="../HTML/bj_money.html" class="menuLinks"> Money </a></ul>
+				<ul class="ulMenu"><a href="../HTML/bj_source.html" class="menuLinks"> Source Code </a></ul>
+			</div>
+		</div>
+	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
+	</BODY>
+</HTML>

@@ -1,0 +1,1021 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="../CSS/dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="../CSS/javadoc.css" title="Style">
+		<script type="text/javascript" src="../JavaScript/javadoc.js"></script>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle"><a href="../index.html" id="indexBanner">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</a></div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><a href="../HTML/about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="../HTML/paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton"><a href="../HTML/blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Javadoc: PaintApp Class </h5> <hr>
+<div class="contentContainer">
+<ul class="jdoc_ul inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>java.awt.Component</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>java.awt.Container</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>java.awt.Window</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>java.awt.Frame</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>PaintApp</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.WindowListener, java.awt.image.ImageObserver, java.awt.MenuContainer, java.io.Serializable, java.util.EventListener, javax.accessibility.Accessible</dd>
+</dl>
+<hr>
+<pre>public class <span class="typeNameLabel">PaintApp</span>
+extends java.awt.Frame
+implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt.event.MouseMotionListener</pre>
+<div class="block">This driver class controls the paint program's frame and graphical output.
+ By implementing the WindowListener, MouseListener, and MouseMotionListener interfaces, the PaintApp class also manages how the mouse interacts with the application.
+ Due to Java's strict security measures, I decided to convert my applet into an application.
+
+ <br><br><b> Submitted to AP Computer Science 12:</b> 2015-01-27
+ <br><b> Last modified:</b> 2015-04-04
+ <br><b> Author:</b> Samantha Yu</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="nested.class.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Nested Class Summary</h3>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="nested.classes.inherited.from.class.java.awt.Frame">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Nested classes/interfaces inherited from class&nbsp;java.awt.Frame</h3>
+<code>java.awt.Frame.AccessibleAWTFrame</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="nested.classes.inherited.from.class.java.awt.Window">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Nested classes/interfaces inherited from class&nbsp;java.awt.Window</h3>
+<code>java.awt.Window.AccessibleAWTWindow, java.awt.Window.Type</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="nested.classes.inherited.from.class.java.awt.Container">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Nested classes/interfaces inherited from class&nbsp;java.awt.Container</h3>
+<code>java.awt.Container.AccessibleAWTContainer</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="nested.classes.inherited.from.class.java.awt.Component">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Nested classes/interfaces inherited from class&nbsp;java.awt.Component</h3>
+<code>java.awt.Component.AccessibleAWTComponent, java.awt.Component.BaselineResizeBehavior, java.awt.Component.BltBufferStrategy, java.awt.Component.FlipBufferStrategy</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="field.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#appHeight">appHeight</a></span></code>
+<div class="block">The paint program's dimensions that are used when creating the frame of the paint program.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#appWidth">appWidth</a></span></code>
+<div class="block">The paint program's dimensions that are used when creating the frame of the paint program.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#canvasHeight">canvasHeight</a></span></code>
+<div class="block">The paint program's dimensions that are used when creating the frame of the paint program.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#canvasRect">canvasRect</a></span></code>
+<div class="block">Canvas is not visible but is the click-able region of the window that does not include the menu bar.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#continuePaint">continuePaint</a></span></code>
+<div class="block">Variables used as "switches" during program execution.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#firstPaint">firstPaint</a></span></code>
+<div class="block">Variables used as "switches" during program execution.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private java.awt.Graphics2D</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#g2Frame">g2Frame</a></span></code>
+<div class="block">g2Frame is a Graphics g typecasted to Graphics2D.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#layersArray">layersArray</a></span></code>
+<div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a class="jdoc_a" href="Menu.html" title="class in &lt;Unnamed&gt;">Menu</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#menuBar">menuBar</a></span></code>
+<div class="block">The click-able and visible menu bar that allows the user to decide on the color, size, tool and layer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#menuChange">menuChange</a></span></code>
+<div class="block">Variables used as "switches" during program execution.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#menuHeight">menuHeight</a></span></code>
+<div class="block">Since the canvas does not contain the menu, Tools' useTool() subtracts the menuHeight from its y-coordinates.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#newX">newX</a></span></code>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#newY">newY</a></span></code>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#oldX">oldX</a></span></code>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#oldY">oldY</a></span></code>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#serialVersionUID">serialVersionUID</a></span></code>
+<div class="block">A generated serialVersionUID that ensures proper version control.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a class="jdoc_a" href="Tools.html" title="class in &lt;Unnamed&gt;">Tools</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#toolbar">toolbar</a></span></code>
+<div class="block">A toolbar object that controls the style of the paint tool.</div>
+</td>
+</tr>
+</table>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="fields.inherited.from.class.java.awt.Frame">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Fields inherited from class&nbsp;java.awt.Frame</h3>
+<code>CROSSHAIR_CURSOR, DEFAULT_CURSOR, E_RESIZE_CURSOR, HAND_CURSOR, ICONIFIED, MAXIMIZED_BOTH, MAXIMIZED_HORIZ, MAXIMIZED_VERT, MOVE_CURSOR, N_RESIZE_CURSOR, NE_RESIZE_CURSOR, NORMAL, NW_RESIZE_CURSOR, S_RESIZE_CURSOR, SE_RESIZE_CURSOR, SW_RESIZE_CURSOR, TEXT_CURSOR, W_RESIZE_CURSOR, WAIT_CURSOR</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="fields.inherited.from.class.java.awt.Component">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Fields inherited from class&nbsp;java.awt.Component</h3>
+<code>accessibleContext, BOTTOM_ALIGNMENT, CENTER_ALIGNMENT, LEFT_ALIGNMENT, RIGHT_ALIGNMENT, TOP_ALIGNMENT</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="fields.inherited.from.class.java.awt.image.ImageObserver">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Fields inherited from interface&nbsp;java.awt.image.ImageObserver</h3>
+<code>ABORT, ALLBITS, ERROR, FRAMEBITS, HEIGHT, PROPERTIES, SOMEBITS, WIDTH</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="constructor.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#PaintApp--">PaintApp</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="method.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a class="jdoc_a" href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a class="jdoc_a" href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a class="jdoc_a" href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#createApp--">createApp</a></span>()</code>
+<div class="block">The menu bar, canvas, layers array, and toolbar are created.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#createCanvas--">createCanvas</a></span>()</code>
+<div class="block">This method creates the canvas, which is the entire application excluding the menu bar, that the user can draw on.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#getAppWidth--">getAppWidth</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#getCanvasHeight--">getCanvasHeight</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#getMenuHeight--">getMenuHeight</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#main-java.lang.String:A-">main</a></span>(java.lang.String[]&nbsp;args)</code>
+<div class="block">The main() handles the application framework by adding a window listener, mouse listener, and mouse motion listener, and making the application visible.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mouseClicked-java.awt.event.MouseEvent-">mouseClicked</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>
+<div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener</span>.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mouseDragged-java.awt.event.MouseEvent-">mouseDragged</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>
+<div class="block">When a mouse button is held down and is dragged, mouseDragged() gets the current coordinates.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mouseEntered-java.awt.event.MouseEvent-">mouseEntered</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>
+<div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mouseExited-java.awt.event.MouseEvent-">mouseExited</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mouseMoved-java.awt.event.MouseEvent-">mouseMoved</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>
+<div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mousePressed-java.awt.event.MouseEvent-">mousePressed</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>
+<div class="block">When any of the mouse buttons are pressed down, mousePressed() gets the current coordinates.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#mouseReleased-java.awt.event.MouseEvent-">mouseReleased</a></span>(java.awt.event.MouseEvent&nbsp;e)</code>
+<div class="block">When any of the buttons are released, mouseReleased() gets the current coordinates.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#paint-java.awt.Graphics-">paint</a></span>(java.awt.Graphics&nbsp;g)</code>
+<div class="block">The paint() is called after paintProgram became visible and whenever the graphical output needs to be updated or repainted
+ During its first call, paint() draws the menu onto the window from the menu's off-screen image.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#paintLayers-java.awt.Graphics2D-">paintLayers</a></span>(java.awt.Graphics2D&nbsp;g2Frame)</code>
+<div class="block">The paint() calls the paintLayers() to update the canvas' graphics.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#update-java.awt.Graphics-">update</a></span>(java.awt.Graphics&nbsp;g)</code>
+<div class="block">When repaint() is called, the update() then calls paint().</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowActivated-java.awt.event.WindowEvent-">windowActivated</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowClosed-java.awt.event.WindowEvent-">windowClosed</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowClosing-java.awt.event.WindowEvent-">windowClosing</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block">When the window is closed, the Frame is destroyed and the Java virtual machine is terminated.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowDeactivated-java.awt.event.WindowEvent-">windowDeactivated</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowDeiconified-java.awt.event.WindowEvent-">windowDeiconified</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowIconified-java.awt.event.WindowEvent-">windowIconified</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i22" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#windowOpened-java.awt.event.WindowEvent-">windowOpened</a></span>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block">These window events are required to be implemented, because this class implements the WindowListener.</div>
+</td>
+</tr>
+</table>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.awt.Frame">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.awt.Frame</h3>
+<code>addNotify, getAccessibleContext, getCursorType, getExtendedState, getFrames, getIconImage, getMaximizedBounds, getMenuBar, getState, getTitle, isResizable, isUndecorated, paramString, remove, removeNotify, setBackground, setCursor, setExtendedState, setIconImage, setMaximizedBounds, setMenuBar, setOpacity, setResizable, setShape, setState, setTitle, setUndecorated</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.awt.Window">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.awt.Window</h3>
+<code>addPropertyChangeListener, addPropertyChangeListener, addWindowFocusListener, addWindowListener, addWindowStateListener, applyResourceBundle, applyResourceBundle, createBufferStrategy, createBufferStrategy, dispose, getBackground, getBufferStrategy, getFocusableWindowState, getFocusCycleRootAncestor, getFocusOwner, getFocusTraversalKeys, getIconImages, getInputContext, getListeners, getLocale, getModalExclusionType, getMostRecentFocusOwner, getOpacity, getOwnedWindows, getOwner, getOwnerlessWindows, getShape, getToolkit, getType, getWarningString, getWindowFocusListeners, getWindowListeners, getWindows, getWindowStateListeners, hide, isActive, isAlwaysOnTop, isAlwaysOnTopSupported, isAutoRequestFocus, isFocusableWindow, isFocusCycleRoot, isFocused, isLocationByPlatform, isOpaque, isShowing, isValidateRoot, pack, postEvent, processEvent, processWindowEvent, processWindowFocusEvent, processWindowStateEvent, removeWindowFocusListener, removeWindowListener, removeWindowStateListener, reshape, setAlwaysOnTop, setAutoRequestFocus, setBounds, setBounds, setCursor, setFocusableWindowState, setFocusCycleRoot, setIconImages, setLocation, setLocation, setLocationByPlatform, setLocationRelativeTo, setMinimumSize, setModalExclusionType, setSize, setSize, setType, setVisible, show, toBack, toFront</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.awt.Container">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.awt.Container</h3>
+<code>add, add, add, add, add, addContainerListener, addImpl, applyComponentOrientation, areFocusTraversalKeysSet, countComponents, deliverEvent, doLayout, findComponentAt, findComponentAt, getAlignmentX, getAlignmentY, getComponent, getComponentAt, getComponentAt, getComponentCount, getComponents, getComponentZOrder, getContainerListeners, getFocusTraversalPolicy, getInsets, getLayout, getMaximumSize, getMinimumSize, getMousePosition, getPreferredSize, insets, invalidate, isAncestorOf, isFocusCycleRoot, isFocusTraversalPolicyProvider, isFocusTraversalPolicySet, layout, list, list, locate, minimumSize, paintComponents, preferredSize, print, printComponents, processContainerEvent, remove, remove, removeAll, removeContainerListener, setComponentZOrder, setFocusTraversalKeys, setFocusTraversalPolicy, setFocusTraversalPolicyProvider, setFont, setLayout, transferFocusDownCycle, validate, validateTree</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.awt.Component">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.awt.Component</h3>
+<code>action, add, addComponentListener, addFocusListener, addHierarchyBoundsListener, addHierarchyListener, addInputMethodListener, addKeyListener, addMouseListener, addMouseMotionListener, addMouseWheelListener, bounds, checkImage, checkImage, coalesceEvents, contains, contains, createImage, createImage, createVolatileImage, createVolatileImage, disable, disableEvents, dispatchEvent, enable, enable, enableEvents, enableInputMethods, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, getBaseline, getBaselineResizeBehavior, getBounds, getBounds, getColorModel, getComponentListeners, getComponentOrientation, getCursor, getDropTarget, getFocusListeners, getFocusTraversalKeysEnabled, getFont, getFontMetrics, getForeground, getGraphics, getGraphicsConfiguration, getHeight, getHierarchyBoundsListeners, getHierarchyListeners, getIgnoreRepaint, getInputMethodListeners, getInputMethodRequests, getKeyListeners, getLocation, getLocation, getLocationOnScreen, getMouseListeners, getMouseMotionListeners, getMousePosition, getMouseWheelListeners, getName, getParent, getPeer, getPropertyChangeListeners, getPropertyChangeListeners, getSize, getSize, getTreeLock, getWidth, getX, getY, gotFocus, handleEvent, hasFocus, imageUpdate, inside, isBackgroundSet, isCursorSet, isDisplayable, isDoubleBuffered, isEnabled, isFocusable, isFocusOwner, isFocusTraversable, isFontSet, isForegroundSet, isLightweight, isMaximumSizeSet, isMinimumSizeSet, isPreferredSizeSet, isValid, isVisible, keyDown, keyUp, list, list, list, location, lostFocus, mouseDown, mouseDrag, mouseEnter, mouseExit, mouseMove, mouseUp, move, nextFocus, paintAll, prepareImage, prepareImage, printAll, processComponentEvent, processFocusEvent, processHierarchyBoundsEvent, processHierarchyEvent, processInputMethodEvent, processKeyEvent, processMouseEvent, processMouseMotionEvent, processMouseWheelEvent, removeComponentListener, removeFocusListener, removeHierarchyBoundsListener, removeHierarchyListener, removeInputMethodListener, removeKeyListener, removeMouseListener, removeMouseMotionListener, removeMouseWheelListener, removePropertyChangeListener, removePropertyChangeListener, repaint, repaint, repaint, repaint, requestFocus, requestFocus, requestFocusInWindow, requestFocusInWindow, resize, resize, revalidate, setComponentOrientation, setDropTarget, setEnabled, setFocusable, setFocusTraversalKeysEnabled, setForeground, setIgnoreRepaint, setLocale, setMaximumSize, setName, setPreferredSize, show, size, toString, transferFocus, transferFocusBackward, transferFocusUpCycle</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.awt.MenuContainer">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from interface&nbsp;java.awt.MenuContainer</h3>
+<code>getFont, postEvent</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="field.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Field Detail</h3>
+<a class="jdoc_a" name="serialVersionUID">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">serialVersionUID</h4>
+<pre>private static final&nbsp;long serialVersionUID</pre>
+<div class="block">A generated serialVersionUID that ensures proper version control.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a class="jdoc_a" href="constant-values.html#PaintApp.serialVersionUID">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="appWidth">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">appWidth</h4>
+<pre>private&nbsp;int appWidth</pre>
+<div class="block">The paint program's dimensions that are used when creating the frame of the paint program.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="appHeight">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">appHeight</h4>
+<pre>private&nbsp;int appHeight</pre>
+<div class="block">The paint program's dimensions that are used when creating the frame of the paint program.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="canvasHeight">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">canvasHeight</h4>
+<pre>private&nbsp;int canvasHeight</pre>
+<div class="block">The paint program's dimensions that are used when creating the frame of the paint program.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="menuBar">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">menuBar</h4>
+<pre>private&nbsp;<a class="jdoc_a" href="Menu.html" title="class in &lt;Unnamed&gt;">Menu</a> menuBar</pre>
+<div class="block">The click-able and visible menu bar that allows the user to decide on the color, size, tool and layer.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="toolbar">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">toolbar</h4>
+<pre>private&nbsp;<a class="jdoc_a" href="Tools.html" title="class in &lt;Unnamed&gt;">Tools</a> toolbar</pre>
+<div class="block">A toolbar object that controls the style of the paint tool.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="menuHeight">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">menuHeight</h4>
+<pre>private&nbsp;int menuHeight</pre>
+<div class="block">Since the canvas does not contain the menu, Tools' useTool() subtracts the menuHeight from its y-coordinates.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="canvasRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">canvasRect</h4>
+<pre>private&nbsp;java.awt.Rectangle canvasRect</pre>
+<div class="block">Canvas is not visible but is the click-able region of the window that does not include the menu bar.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="firstPaint">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">firstPaint</h4>
+<pre>private&nbsp;boolean firstPaint</pre>
+<div class="block">Variables used as "switches" during program execution.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="menuChange">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">menuChange</h4>
+<pre>private&nbsp;boolean menuChange</pre>
+<div class="block">Variables used as "switches" during program execution.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="continuePaint">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">continuePaint</h4>
+<pre>private&nbsp;boolean continuePaint</pre>
+<div class="block">Variables used as "switches" during program execution.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="oldX">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">oldX</h4>
+<pre>private&nbsp;int oldX</pre>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="oldY">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">oldY</h4>
+<pre>private&nbsp;int oldY</pre>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="newX">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">newX</h4>
+<pre>private&nbsp;int newX</pre>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="newY">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">newY</h4>
+<pre>private&nbsp;int newY</pre>
+<div class="block">The coordinates from mouse events like Mouse_Released are stored in these variables.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="g2Frame">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">g2Frame</h4>
+<pre>private&nbsp;java.awt.Graphics2D g2Frame</pre>
+<div class="block">g2Frame is a Graphics g typecasted to Graphics2D.
+ g2Frame thus controls the graphics of the entire window.
+ For example, g2Frame paints the current buffered image stored in imageArray at cLayerNum onto the window.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="layersArray">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">layersArray</h4>
+<pre>private&nbsp;<a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a> layersArray</pre>
+<div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="constructor.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Constructor Detail</h3>
+<a class="jdoc_a" name="PaintApp--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">PaintApp</h4>
+<pre>public&nbsp;PaintApp()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="method.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Method Detail</h3>
+<a class="jdoc_a" name="main-java.lang.String:A-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">main</h4>
+<pre>public static&nbsp;void&nbsp;main(java.lang.String[]&nbsp;args)</pre>
+<div class="block">The main() handles the application framework by adding a window listener, mouse listener, and mouse motion listener, and making the application visible.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>args</code> - The command line arguments are not used in this paint program so it is unnecessary to declare them.</dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="createApp--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">createApp</h4>
+<pre>public&nbsp;void&nbsp;createApp()</pre>
+<div class="block">The menu bar, canvas, layers array, and toolbar are created.
+ The menu is "click-able" and can handle mouse events, but is not visible yet until paint() is called.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="paint-java.awt.Graphics-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">paint</h4>
+<pre>public&nbsp;void&nbsp;paint(java.awt.Graphics&nbsp;g)</pre>
+<div class="block">The paint() is called after paintProgram became visible and whenever the graphical output needs to be updated or repainted
+ During its first call, paint() draws the menu onto the window from the menu's off-screen image.
+ <p>
+ After the first call, if a user's mouse did not click inside the menu, the mouse paints with the user's selected tool, size, and color.
+ But if a menu item is selected, then the area underneath the menu is not painted.
+ Regardless of whether a menu item was selected, paintLayers() is called and the canvas is updated.
+ When the user selects a large size for their tool, then the canvas will not be accidentally painted.
+ </p>
+ <p>
+ If the user has a selected menu item, the menu bar is updated and redrawn.
+ In every paint() call, the menu bar is redrawn to prevent it from disappearing when the window has gone inactive or been resized.
+ </p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>paint</code>&nbsp;in class&nbsp;<code>java.awt.Window</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="paintLayers-java.awt.Graphics2D-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">paintLayers</h4>
+<pre>public&nbsp;void&nbsp;paintLayers(java.awt.Graphics2D&nbsp;g2Frame)</pre>
+<div class="block">The paint() calls the paintLayers() to update the canvas' graphics.
+ If a layer is deleted, the blank deleted layer is first drawn to erase the deleted layer's graphics from the window.
+ The rest of the layers are then drawn in ascending order and the blank deleted layer is removed from imageArray.
+ Regardless of whether the user decided to delete a layer, the current layer is drawn last for visibility.
+ If the user is not deleting a layer, the other layers are not redrawn to prevent these layers from flickering.
+ Also, the layer status is updated when a layer is created, deleted, or switched to a different layer.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>g2Frame</code> - Graphics g typecasted to Graphics2D</dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowClosing-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowClosing</h4>
+<pre>public&nbsp;void&nbsp;windowClosing(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block">When the window is closed, the Frame is destroyed and the Java virtual machine is terminated.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowClosing</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowOpened-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowOpened</h4>
+<pre>public&nbsp;void&nbsp;windowOpened(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block">These window events are required to be implemented, because this class implements the WindowListener.
+ However, this paint program does not need these window events so these methods are left blank</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowOpened</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowIconified-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowIconified</h4>
+<pre>public&nbsp;void&nbsp;windowIconified(java.awt.event.WindowEvent&nbsp;e)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowIconified</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowClosed-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowClosed</h4>
+<pre>public&nbsp;void&nbsp;windowClosed(java.awt.event.WindowEvent&nbsp;e)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowClosed</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowDeiconified-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowDeiconified</h4>
+<pre>public&nbsp;void&nbsp;windowDeiconified(java.awt.event.WindowEvent&nbsp;e)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowDeiconified</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowActivated-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowActivated</h4>
+<pre>public&nbsp;void&nbsp;windowActivated(java.awt.event.WindowEvent&nbsp;e)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowActivated</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="windowDeactivated-java.awt.event.WindowEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">windowDeactivated</h4>
+<pre>public&nbsp;void&nbsp;windowDeactivated(java.awt.event.WindowEvent&nbsp;e)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>windowDeactivated</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="createCanvas--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">createCanvas</h4>
+<pre>private&nbsp;void&nbsp;createCanvas()</pre>
+<div class="block">This method creates the canvas, which is the entire application excluding the menu bar, that the user can draw on.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="getAppWidth--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">getAppWidth</h4>
+<pre>public&nbsp;int&nbsp;getAppWidth()</pre>
+</li>
+</ul>
+<a class="jdoc_a" name="getCanvasHeight--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">getCanvasHeight</h4>
+<pre>public&nbsp;int&nbsp;getCanvasHeight()</pre>
+</li>
+</ul>
+<a class="jdoc_a" name="getMenuHeight--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">getMenuHeight</h4>
+<pre>public&nbsp;int&nbsp;getMenuHeight()</pre>
+</li>
+</ul>
+<a class="jdoc_a" name="mouseClicked-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mouseClicked</h4>
+<pre>public&nbsp;void&nbsp;mouseClicked(java.awt.event.MouseEvent&nbsp;e)</pre>
+<div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.
+ However, this paint program does not need these mouse events so these methods are left blank.
+ Unlike the mousePressed() which only occurs when the mouse is pressed, the mouseClicked() requires the user to press and release the mouse button.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mouseClicked</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="mouseEntered-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mouseEntered</h4>
+<pre>public&nbsp;void&nbsp;mouseEntered(java.awt.event.MouseEvent&nbsp;e)</pre>
+<div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.
+ However, this paint program does not need these mouse events so these methods are left blank</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mouseEntered</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="mouseExited-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mouseExited</h4>
+<pre>public&nbsp;void&nbsp;mouseExited(java.awt.event.MouseEvent&nbsp;e)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mouseExited</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="mouseMoved-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mouseMoved</h4>
+<pre>public&nbsp;void&nbsp;mouseMoved(java.awt.event.MouseEvent&nbsp;e)</pre>
+<div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.
+ However, this paint program does not need these mouse events so these methods are left blank
+ Unlike the mouseDragged(), mouseMoved() is for when the mouse is moving but none of the buttons are held down.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mouseMoved</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseMotionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="mousePressed-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mousePressed</h4>
+<pre>public&nbsp;void&nbsp;mousePressed(java.awt.event.MouseEvent&nbsp;e)</pre>
+<div class="block">When any of the mouse buttons are pressed down, mousePressed() gets the current coordinates.
+ mousePressed() repaints the application if the user has selected a menu item or clicked inside the canvas.
+ mouseClicked() is called when the mouse presses down then releases.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mousePressed</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="mouseDragged-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mouseDragged</h4>
+<pre>public&nbsp;void&nbsp;mouseDragged(java.awt.event.MouseEvent&nbsp;e)</pre>
+<div class="block">When a mouse button is held down and is dragged, mouseDragged() gets the current coordinates.
+ mouseDragged() repaints the application if the mouse was dragged inside the canvas.
+ mouseMoved() is called when the mouse is moving but none of the buttons are held down.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mouseDragged</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseMotionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="mouseReleased-java.awt.event.MouseEvent-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">mouseReleased</h4>
+<pre>public&nbsp;void&nbsp;mouseReleased(java.awt.event.MouseEvent&nbsp;e)</pre>
+<div class="block">When any of the buttons are released, mouseReleased() gets the current coordinates.
+ mouseReleased() repaints the application if the mouse was released inside the canvas.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>mouseReleased</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="update-java.awt.Graphics-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">update</h4>
+<pre>public&nbsp;void&nbsp;update(java.awt.Graphics&nbsp;g)</pre>
+<div class="block">When repaint() is called, the update() then calls paint().
+ Since "default implementation of update() clears the Component's background before calling paint()" (see <a class="jdoc_a" href="http://journals.ecs.soton.ac.uk/java/tutorial/ui/drawing/update.html" target="_blank">http://journals.ecs.soton.ac.uk/java/tutorial/ui/drawing/update.html</a>), I prevented the background layers from flickering by drawing the layers here.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>update</code>&nbsp;in class&nbsp;<code>java.awt.Container</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4><a href="../HTML/about.html" class="submenuHeading"> About </a></h4>
+				<br>
+				<h4><a href="../HTML/paint.html" class="submenuHeading"> Paint Program </a></h4>
+				<ul class="ulMenu"><a href="../HTML/paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_layers.html" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_menu.html" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_tools.html" class="menuLinks"> Tools </a></ul>
+				<ul class="ulMenu"><a href="javadoc_paintApp.html" class="menuLinks selectedSubmenu"> Javadoc</a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_paintApp.html" class="jdocLinks selected_jdocMenu"> PaintApp Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_layers.html" class="jdocLinks"> Layers Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_menu.html" class="jdocLinks"> Menu Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_tools.html" class="jdocLinks"> Tools Class </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_source.html" class="menuLinks"> Source Code </a></ul>
+				<br>
+				<h4><a href="../HTML/blackjack.html" class="submenuHeading"> Blackjack </a></h4>
+				<ul class="ulMenu"><a href="../HTML/bj_gameplay.html" class="menuLinks"> Gameplay </a></ul>
+				<ul class="ulMenu"><a href="../HTML/bj_money.html" class="menuLinks"> Money </a></ul>
+				<ul class="ulMenu"><a href="../HTML/bj_source.html" class="menuLinks"> Source Code </a></ul>
+			</div>
+		</div>
+	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
+	</BODY>
+</HTML>

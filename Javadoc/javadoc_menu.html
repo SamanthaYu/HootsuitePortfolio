@@ -1,0 +1,854 @@
+<HTML>
+	<HEAD>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>Samantha Yu: Dogwood</TITLE>
+		<link rel="stylesheet" type="text/css" href="../CSS/dogwoodStyle.css">
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="../CSS/javadoc.css" title="Style">
+		<script type="text/javascript" src="../JavaScript/javadoc.js"></script>
+	<HEAD>
+	<BODY>
+		<div id="banner">
+			<div id="bannerTitle"><a href="../index.html" id="indexBanner">
+				<div id="bannerName">
+					<h1> Samantha Yu </h1>
+				</div>
+				<div id="bannerDogwood">
+					<h2> Dogwood Portfolio </h2>
+				</div>
+			</a></div>
+			<div class="verticalLine" id="boldLine"></div>
+			<div class="verticalLine" id="regLine"></div>
+			<div id="bannerMenu">
+				<div class="menuButton"><a href="../HTML/about.html" class="headingLink"><h3> About </h3></a></div>
+				<div class="menuButton selectedMenu"><a href="../HTML/paint.html" class="headingLink"><h3> Paint </h3></a></div>
+				<div class="menuButton"><a href="../HTML/blackjack.html" class="headingLink"><h3> Blackjack </h3></a></div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="bodyContent" id="mainBody">
+				<h5> Javadoc: Menu Class </h5> <hr>
+<div class="contentContainer">
+<ul class="jdoc_ul inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="jdoc_ul inheritance">
+<li>Menu</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">Menu</span>
+extends java.lang.Object</pre>
+<div class="block">This Menu class controls the user's interaction with the menu bar and the appearance of the menu bar.
+ 
+ <br><br><b> Submitted to AP Computer Science 12:</b> 2015-01-27
+ <br><b> Last modified:</b> 2015-04-04
+ <br><b> Author:</b> Samantha Yu</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="field.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#brushRect">brushRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Font</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#btnFont">btnFont</a></span></code>
+<div class="block">Font used for the title of the buttons.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#colorRect">colorRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#delRect">delRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#fontColor">fontColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Graphics2D</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#g2Menu">g2Menu</a></span></code>
+<div class="block">g2Menu will paint graphics onto the menuImage to update the menu when necessary.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#layerBtnColor">layerBtnColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#layersArray">layersArray</a></span></code>
+<div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#menuColor">menuColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.image.BufferedImage</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#menuImage">menuImage</a></span></code>
+<div class="block">To prevent the menu bar being erased when the window is no longer active, menuImage will store the current image.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#menuRect">menuRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#newRect">newRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#nextRect">nextRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#numTool">numTool</a></span></code>
+<div class="block">These variables are passed on to the Tools methods to control how the user paints onto the canvas.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#paintColor">paintColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#paintLab">paintLab</a></span></code>
+<div class="block">A PaintApp object has only one instance and allows this class to access its non-static methods and fields.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#pencilRect">pencilRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#prevRect">prevRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#selectColor">selectColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#sizeColor">sizeColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#sizeRect">sizeRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) java.awt.Rectangle</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#sprayRect">sprayRect</a></span></code>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#stringStroke">stringStroke</a></span></code>
+<div class="block">This variable is used when getting the color from the dialog boxes of the JColorChooser.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#strokeSize">strokeSize</a></span></code>
+<div class="block">These variables are passed on to the Tools methods to control how the user paints onto the canvas.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) java.awt.Color</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#toolColor">toolColor</a></span></code>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="constructor.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#Menu-PaintApp-Layers-">Menu</a></span>(<a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab,
+    <a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a>&nbsp;lArray)</code>
+<div class="block">When the Menu object is constructed, the invisible but "click-able" buttons are also constructed.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="method.summary">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a class="jdoc_a" href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a class="jdoc_a" href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#changeColorMenu--">changeColorMenu</a></span>()</code>
+<div class="block">After the user has selected their new color, the menu's color button is updated with the newly selected color.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#changeLayerMenu--">changeLayerMenu</a></span>()</code>
+<div class="block">When the user has created or deleted a layer or moved to a different layer, the layers status is updated.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#changeSizeMenu--">changeSizeMenu</a></span>()</code>
+<div class="block">After the user has selected the size button, the size status is updated with the user's input.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#changeToolMenu--">changeToolMenu</a></span>()</code>
+<div class="block">After the user has selected a tool button, the borders around the tool buttons are updated to show which button is now selected.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#createMenu--">createMenu</a></span>()</code>
+<div class="block">createMenu() creates the physical appearance of the menu by first creating menuImage, a blank BufferedImage.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#getNumTool--">getNumTool</a></span>()</code>
+<div class="block">Returns the private numTool field that decides what tool is used</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#getStrokeSize--">getStrokeSize</a></span>()</code>
+<div class="block">Returns the current stroke size of the tool</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#makeBackgroundMenu--">makeBackgroundMenu</a></span>()</code>
+<div class="block">This method paints the menu's background by filling a rectangle that is as wide as the application and as tall as the menu.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#makeColorButton--">makeColorButton</a></span>()</code>
+<div class="block">This method paints the color button as a border around a rectangle.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#makeLayerButtons--">makeLayerButtons</a></span>()</code>
+<div class="block">This method paints the new, previous, next, and delete layer buttons and the layer status bar.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#makeSizeButton--">makeSizeButton</a></span>()</code>
+<div class="block">This method paints the size button with the current tool's size status on top.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#makeToolButtons--">makeToolButtons</a></span>()</code>
+<div class="block">This method paints the pencil, elastic, and paint bucket with their names on top.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#select-int-int-">select</a></span>(int&nbsp;x,
+      int&nbsp;y)</code>
+<div class="block">Depending on what buttons the user clicks, certain methods are called to update either the color, tool, size, or layer.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#selectColor--">selectColor</a></span>()</code>
+<div class="block">When the user selects on the color button, only the RGB tab of the JColorChooser appears.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="Menu.html#selectSize--">selectSize</a></span>()</code>
+<div class="block">When the user selects the size button, a dialog box requests the user to input how many pixels wide they want their tools to be.</div>
+</td>
+</tr>
+</table>
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="field.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Field Detail</h3>
+<a class="jdoc_a" name="menuRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">menuRect</h4>
+<pre>java.awt.Rectangle menuRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="colorRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">colorRect</h4>
+<pre>java.awt.Rectangle colorRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="sizeRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">sizeRect</h4>
+<pre>java.awt.Rectangle sizeRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="pencilRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">pencilRect</h4>
+<pre>java.awt.Rectangle pencilRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="brushRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">brushRect</h4>
+<pre>java.awt.Rectangle brushRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="sprayRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">sprayRect</h4>
+<pre>java.awt.Rectangle sprayRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="newRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">newRect</h4>
+<pre>java.awt.Rectangle newRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="prevRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">prevRect</h4>
+<pre>java.awt.Rectangle prevRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="nextRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">nextRect</h4>
+<pre>java.awt.Rectangle nextRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="delRect">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">delRect</h4>
+<pre>java.awt.Rectangle delRect</pre>
+<div class="block">Menu buttons are not physically seen but are the "click-able" items.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="menuColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">menuColor</h4>
+<pre>java.awt.Color menuColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="paintColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">paintColor</h4>
+<pre>java.awt.Color paintColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="toolColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">toolColor</h4>
+<pre>java.awt.Color toolColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="sizeColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">sizeColor</h4>
+<pre>java.awt.Color sizeColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="fontColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">fontColor</h4>
+<pre>java.awt.Color fontColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="layerBtnColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">layerBtnColor</h4>
+<pre>java.awt.Color layerBtnColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="selectColor">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">selectColor</h4>
+<pre>java.awt.Color selectColor</pre>
+<div class="block">These variables are used for the appearance of the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="btnFont">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">btnFont</h4>
+<pre>java.awt.Font btnFont</pre>
+<div class="block">Font used for the title of the buttons.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="numTool">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">numTool</h4>
+<pre>private&nbsp;int numTool</pre>
+<div class="block">These variables are passed on to the Tools methods to control how the user paints onto the canvas.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="strokeSize">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">strokeSize</h4>
+<pre>private&nbsp;int strokeSize</pre>
+<div class="block">These variables are passed on to the Tools methods to control how the user paints onto the canvas.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="stringStroke">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">stringStroke</h4>
+<pre>java.lang.String stringStroke</pre>
+<div class="block">This variable is used when getting the color from the dialog boxes of the JColorChooser.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="menuImage">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">menuImage</h4>
+<pre>java.awt.image.BufferedImage menuImage</pre>
+<div class="block">To prevent the menu bar being erased when the window is no longer active, menuImage will store the current image.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="g2Menu">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">g2Menu</h4>
+<pre>java.awt.Graphics2D g2Menu</pre>
+<div class="block">g2Menu will paint graphics onto the menuImage to update the menu when necessary.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="paintLab">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">paintLab</h4>
+<pre><a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a> paintLab</pre>
+<div class="block">A PaintApp object has only one instance and allows this class to access its non-static methods and fields. 
+ I did not make PaintApp's fields static, because those fields refer to the one and same object, the paint program.
+ I did not want to place the Menu's methods into PaintApp, because those methods belong in its own separate category.
+ So, this Menu class must be able to access and change the graphical output of PaintApp such as as the get methods like getAppWidth().</div>
+</li>
+</ul>
+<a class="jdoc_a" name="layersArray">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">layersArray</h4>
+<pre><a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a> layersArray</pre>
+<div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="constructor.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Constructor Detail</h3>
+<a class="jdoc_a" name="Menu-PaintApp-Layers-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">Menu</h4>
+<pre>public&nbsp;Menu(<a class="jdoc_a" href="PaintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab,
+            <a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a>&nbsp;lArray)</pre>
+<div class="block">When the Menu object is constructed, the invisible but "click-able" buttons are also constructed.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pLab</code> - The driver class, PaintApp, passes itself to the Menu() constructor to ensure that its Menu object has sufficient access to its methods and variables.</dd>
+<dd><code>lArray</code> - The Layers class passes itself to the Tools() constructor to ensure that its Tools object has sufficient access to its methods and variables.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="jdoc_ul blockList">
+<li class="blockList"><a class="jdoc_a" name="method.detail">
+<!--   -->
+</a>
+<h3 class="jdoc_h3">Method Detail</h3>
+<a class="jdoc_a" name="createMenu--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">createMenu</h4>
+<pre>public&nbsp;void&nbsp;createMenu()</pre>
+<div class="block">createMenu() creates the physical appearance of the menu by first creating menuImage, a blank BufferedImage.
+ Next, other methods such as makeBackgroundMenu() are called to paint onto the menuImage.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="makeBackgroundMenu--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">makeBackgroundMenu</h4>
+<pre>private&nbsp;void&nbsp;makeBackgroundMenu()</pre>
+<div class="block">This method paints the menu's background by filling a rectangle that is as wide as the application and as tall as the menu.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="makeColorButton--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">makeColorButton</h4>
+<pre>private&nbsp;void&nbsp;makeColorButton()</pre>
+<div class="block">This method paints the color button as a border around a rectangle.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="makeToolButtons--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">makeToolButtons</h4>
+<pre>private&nbsp;void&nbsp;makeToolButtons()</pre>
+<div class="block">This method paints the pencil, elastic, and paint bucket with their names on top.
+ A border is drawn around the first selected tool, the pencil, and draws an "invisible" border (same color as the menu) on the other tools.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="makeSizeButton--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">makeSizeButton</h4>
+<pre>private&nbsp;void&nbsp;makeSizeButton()</pre>
+<div class="block">This method paints the size button with the current tool's size status on top.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="makeLayerButtons--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">makeLayerButtons</h4>
+<pre>private&nbsp;void&nbsp;makeLayerButtons()</pre>
+<div class="block">This method paints the new, previous, next, and delete layer buttons and the layer status bar.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="select-int-int-">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">select</h4>
+<pre>public&nbsp;void&nbsp;select(int&nbsp;x,
+                   int&nbsp;y)</pre>
+<div class="block">Depending on what buttons the user clicks, certain methods are called to update either the color, tool, size, or layer.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>x</code> - The x-coordinate of where the user clicked</dd>
+<dd><code>y</code> - The y-coordinate of where the user clicked</dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="selectColor--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">selectColor</h4>
+<pre>private&nbsp;void&nbsp;selectColor()</pre>
+<div class="block">When the user selects on the color button, only the RGB tab of the JColorChooser appears.
+ Since transparent lines are compounded on top of each other when draw in succession causing the transparent lines to appear opaque, I converted the RGBA values into RGB.
+ Now, the color of the menu's color button matches the color drawn on the canvas.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="selectSize--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">selectSize</h4>
+<pre>private&nbsp;void&nbsp;selectSize()</pre>
+<div class="block">When the user selects the size button, a dialog box requests the user to input how many pixels wide they want their tools to be.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="changeColorMenu--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">changeColorMenu</h4>
+<pre>private&nbsp;void&nbsp;changeColorMenu()</pre>
+<div class="block">After the user has selected their new color, the menu's color button is updated with the newly selected color.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="changeToolMenu--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">changeToolMenu</h4>
+<pre>public&nbsp;void&nbsp;changeToolMenu()</pre>
+<div class="block">After the user has selected a tool button, the borders around the tool buttons are updated to show which button is now selected.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="changeSizeMenu--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">changeSizeMenu</h4>
+<pre>private&nbsp;void&nbsp;changeSizeMenu()</pre>
+<div class="block">After the user has selected the size button, the size status is updated with the user's input.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="changeLayerMenu--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">changeLayerMenu</h4>
+<pre>public&nbsp;void&nbsp;changeLayerMenu()</pre>
+<div class="block">When the user has created or deleted a layer or moved to a different layer, the layers status is updated.</div>
+</li>
+</ul>
+<a class="jdoc_a" name="getNumTool--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockList">
+<li class="blockList">
+<h4 class="jdoc_h4">getNumTool</h4>
+<pre>public&nbsp;int&nbsp;getNumTool()</pre>
+<div class="block">Returns the private numTool field that decides what tool is used</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>numTool</dd>
+</dl>
+</li>
+</ul>
+<a class="jdoc_a" name="getStrokeSize--">
+<!--   -->
+</a>
+<ul class="jdoc_ul blockListLast">
+<li class="blockList">
+<h4 class="jdoc_h4">getStrokeSize</h4>
+<pre>public&nbsp;int&nbsp;getStrokeSize()</pre>
+<div class="block">Returns the current stroke size of the tool</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>strokeSize</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>				
+			</div>
+			<div class="bodyContent" id="sidebar">
+				<h4><a href="../HTML/about.html" class="submenuHeading"> About </a></h4>
+				<br>
+				<h4><a href="../HTML/paint.html" class="submenuHeading"> Paint Program </a></h4>
+				<ul class="ulMenu"><a href="../HTML/paint_doubleBuffering.html" class="menuLinks"> Double Buffering </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_startup.html" class="menuLinks"> On Startup </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_layers.html" class="menuLinks"> Layers </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_menu.html" class="menuLinks"> Menu </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_colors.html" class="menuLinks"> Colors </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_tools.html" class="menuLinks"> Tools </a></ul>
+				<ul class="ulMenu"><a href="javadoc_paintApp.html" class="menuLinks selectedSubmenu"> Javadoc</a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_paintApp.html" class="jdocLinks"> PaintApp Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_layers.html" class="jdocLinks"> Layers Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_menu.html" class="jdocLinks selected_jdocMenu"> Menu Class </a></ul>
+					<ul class="jdoc_ulMenu"><a href="javadoc_tools.html" class="jdocLinks"> Tools Class </a></ul>
+				<ul class="ulMenu"><a href="../HTML/paint_source.html" class="menuLinks"> Source Code </a></ul>
+				<br>
+				<h4><a href="../HTML/blackjack.html" class="submenuHeading"> Blackjack </a></h4>
+				<ul class="ulMenu"><a href="../HTML/bj_gameplay.html" class="menuLinks"> Gameplay </a></ul>
+				<ul class="ulMenu"><a href="../HTML/bj_money.html" class="menuLinks"> Money </a></ul>
+				<ul class="ulMenu"><a href="../HTML/bj_source.html" class="menuLinks"> Source Code </a></ul>
+			</div>
+		</div>
+	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
+	</BODY>
+</HTML>

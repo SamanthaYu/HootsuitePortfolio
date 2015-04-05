@@ -47,6 +47,7 @@ h4 {	/* Sidebar Headings*/
 h5 {	/* Page headings; eg "Paint Program"; "Colours" */
 	padding: 0;
 	margin: 0;
+	font-family: 'Georgia', serif;
 	font-size: 200%;
 	font-weight: bold;
 	font-style: italic;
@@ -97,30 +98,16 @@ div.menuButton:hover {
 	display: inline-block;
 	height: 100%;
 }
-.ulMenu {
-	padding: 0;
-	margin: 0 0 5px 0;
-}
-.menuLinks {
-	padding-left: 10px;
-	color: #B0D9EB;
-	font-family: 'Georgia', serif;
-	font-size: 100%;
-	font-style: italic;
-}
-.menuLinks:hover {
-	color: #3EC7C5;
-}
 span.class {
-	color: #1663C7;
+	color: #2055B0;	/* Dark blue */
 	font-style: italic;
 	font-weight: bold;
 }
 span.var {
-	color: #A1EDE6;	/* Light blue */
+	color: #F6D177;	/* Light orange */
 }
 span.method {
-	color: #DCEDA8;	/* Yellowish-Green */
+	color: #96F04F;	/* Yellowish-Green */
 }
 .tdHeading {
 	font-weight: bold;
@@ -133,12 +120,46 @@ a.headingLink {
 	text-decoration: none;
 }
 .headingLink:hover {
-	color: #0C4057;
+	color: #52DFFF;
+}
+.ulMenu {
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+.jdoc_ulMenu {
+	padding: 0 0 0 15px;
+	margin: 0 0 5px 0;
+}
+.jdocLinks {
+	padding-left: 10px;
+	color: #9AE3B9;
+	font-family: 'Georgia', serif;
+	font-size: 100%;
+	font-style: italic;
+}
+.jdocLinks:hover {
+	color: #3EC7C5;
+}
+.menuLinks {
+	padding-left: 10px;
+	color: #B0D9EB;
+	font-family: 'Georgia', serif;
+	font-size: 100%;
+	font-style: italic;
+}
+.menuLinks:hover {
+	color: #EBCF7C;
+}
+.selectedMenu {
+	color: #96F04F;
 }
 .submenuHeading {
 	text-decoration: none;
 }
 .selectedSubmenu {
+	color: #EBCF7C;
+}
+.selected_jdocMenu {
 	color: #3EC7C5;
 }
 .submenuHeading:hover {
