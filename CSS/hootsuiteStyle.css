@@ -21,7 +21,7 @@ h1 {	/* Banner: "Samantha Yu" */
 	font-family: 'Great Vibes', cursive;
 	color: #FFFFFF;
 }
-h2 {	/* Banner: "Dogwood Portfolio" */
+h2 {	/* Banner: "Hootsuite Portfolio" */
 	padding: 0;
 	margin: 0;
 	position: relative;
@@ -198,7 +198,7 @@ div.selectedMenu {
 	padding: 0px;
 	margin: 15px 45px 0px 30px;
 }
-#bannerDogwood {
+#bannerHootsuite {
 	display: block;
 	padding: 0px;
 	margin: -8px 15px 0px 35px;
