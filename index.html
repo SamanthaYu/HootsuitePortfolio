@@ -4,47 +4,6 @@
 		<TITLE>Samantha Yu: Hootsuite</TITLE>
 		<link rel="stylesheet" type="text/css" href="CSS/hootsuiteStyle.css">
 		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-		<STYLE>
-			.halfBody {
-				height: 50%;
-				display: block;
-				overflow: hidden;
-				vertical-align: middle;
-			}
-			.description:before {
-				display: inline-block;
-				vertical-align: middle;
-				height: 100%;
-			}
-			.screenshot {
-				width: calc(50% - 5px);
-				width: -o-calc(50% - 5px); /* opera */
-				width: -webkit-calc(50% - 5px); /* google, safari */
-				width: -moz-calc(50% - 5px); /* firefox */
-				display: inline-block;
-				vertical-align: middle;
-			}
-			.description{
-				display: inline-block;
-				text-align: center;
-				width: 50%;
-				height: 100%;
-				vertical-align: middle;
-				padding-top: 15px;
-			}
-			#paintHalf {
-				background: -webkit-linear-gradient(60deg, #0C4057, #26B59D); /* For Safari 5.1 to 6.0 */
-				background: -o-linear-gradient(60deg, #0C4057, #26B59D); /* For Opera 11.1 to 12.0 */
-				background: -moz-linear-gradient(60deg, #0C4057), #26B59D); /* For Firefox 3.6 to 15 */
-				background: linear-gradient(60deg, #0C4057, #26B59D); /* Standard syntax */
-			}
-			#bjHalf {
-				background: -webkit-linear-gradient(60deg, #26B59D, #0C4057); /* For Safari 5.1 to 6.0 */
-				background: -o-linear-gradient(60deg, #26B59D, #0C4057); /* For Opera 11.1 to 12.0 */
-				background: -moz-linear-gradient(60deg, #26B59D), #0C4057); /* For Firefox 3.6 to 15 */
-				background: linear-gradient(60deg, #26B59D, #0C4057); /* Standard syntax */
-			}
-		</STYLE>
 	<HEAD>
 	<BODY>
 		<div id="banner">
@@ -66,28 +25,11 @@
 		</div>
 		<div id="container">
 			<div class="bodyContent" id="mainBody">
-				<div class="halfBody" id="paintHalf">
-					<a href="HTML/paint.html"><img src="Images/PaintScreenshot.png" alt="Paint Program" class="screenshot" id="paintScreenshot"></a>
-					<div class="description">
-						<h5><a href="HTML/paint.html" class="headingLink"> Paint Program: Java </a></h5><hr>
-						<p>
-							I created this Paint Program in <b>Java</b> for my AP Computer Science 12 class and is built around the concept of <a href="HTML/paint_doubleBuffering.html">double buffering</a>.
-							When I implemented the <a href="HTML/paint_layers.html">layers</a>, I had to change how I was approaching the double buffering concept.
-							My Paint Program went beyond the minimum requirements by using classes and concepts that were not taught in the course.
-						</p>
-					</div>
-				</div>
-				<div class="halfBody" id="bjHalf">
-					<div class="description">
-						<h5><a href="HTML/blackjack.html" class="headingLink"> Blackjack Game: JavaScript </a></h5><hr>
-						<p>
-							I created a Blackjack game in <b>JavaScript</b> for my ICT: Modular Survey 11 class.
-							In my version of Blackjack, the player can <a href="HTML/bj_money.html">select their bet</a> from pre-determined values, going all in, or entering in their own amount.
-							I considered several possible outcomes, such as the user entering invalid amounts, pressing "cancel", having less money than the standard bets, or when the player goes bankrupt.
-						</p>
-					</div>
-					<a href="HTML/blackjack.html"><img src="Images/Blackjack3a.jpg" alt="Blackjack Game" class="screenshot" id="bjScreenshot"></a>
-				</div>
+				<object data="PDF/SamanthaYu_CoverLetter.pdf" type="application/pdf" id="coverLetter" height="100%">
+					<p>It appears you don't have a PDF plugin for this browser.
+					You can <a href="PDF/SamanthaYu_CoverLetter.pdf">click here to
+					download the PDF file.</a></p>
+				</object>
 			</div>
 			<div class="bodyContent" id="sidebar">
 				<h4><a href="HTML/about.html" class="submenuHeading"> About </a></h4>
@@ -99,7 +41,7 @@
 				<ul class="ulMenu"><a href="HTML/paint_menu.html" class="menuLinks"> Menu </a></ul>
 				<ul class="ulMenu"><a href="HTML/paint_colors.html" class="menuLinks"> Colors </a></ul>
 				<ul class="ulMenu"><a href="HTML/paint_tools.html" class="menuLinks"> Tools </a></ul>
-				<ul class="ulMenu"><a href="Javadoc/javadoc_paintApp.html" class="menuLinks selectedSubmenu"> Javadoc</a></ul>
+				<ul class="ulMenu"><a href="Javadoc/javadoc_paintApp.html" class="menuLinks"> Javadoc</a></ul>
 					<ul class="jdoc_ulMenu"><a href="Javadoc/javadoc_paintApp.html" class="jdocLinks"> PaintApp Class </a></ul>
 					<ul class="jdoc_ulMenu"><a href="Javadoc/javadoc_layers.html" class="jdocLinks"> Layers Class </a></ul>
 					<ul class="jdoc_ulMenu"><a href="Javadoc/javadoc_menu.html" class="jdocLinks"> Menu Class </a></ul>

@@ -7,8 +7,19 @@
 		
 		<link rel="stylesheet" type="text/css" href="../CSS/javadoc.css" title="Style">
 		<script type="text/javascript" src="../JavaScript/javadoc.js"></script>
-	<HEAD>
+	</HEAD>
 	<BODY>
+		<script type="text/javascript">
+		var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
+		var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+		var altColor = "altColor";
+		var rowColor = "rowColor";
+		var tableTab = "tableTab";
+		var activeTableTab = "activeTableTab";
+		</script>
+		<noscript>
+		<div>JavaScript is disabled on your browser.</div>
+		</noscript>
 		<div id="banner">
 			<div id="bannerTitle"><a href="../index.html" id="indexBanner">
 				<div id="bannerName">
@@ -68,10 +79,9 @@
 <hr>
 <pre>public class <span class="typeNameLabel">PaintApp</span>
 extends java.awt.Frame
-implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt.event.MouseMotionListener</pre>
+implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt.event.MouseMotionListener</pre><br>
 <div class="block">This driver class controls the paint program's frame and graphical output.
- By implementing the WindowListener, MouseListener, and MouseMotionListener interfaces, the PaintApp class also manages how the mouse interacts with the application.
- Due to Java's strict security measures, I decided to convert my applet into an application.
+ By implementing the <span class="class">WindowListener</span>, <span class="class">MouseListener</span>, and <span class="class">MouseMotionListener</span> interfaces, the <span class="class">PaintApp</span> class also manages how the mouse interacts with the application.
 
  <br><br><b> Submitted to AP Computer Science 12:</b> 2015-01-27
  <br><b> Last modified:</b> 2015-04-04
@@ -173,13 +183,13 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private <a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a></code></td>
+<td class="colFirst"><code>private <a class="jdoc_a" href="javadoc_layers.html" title="class in &lt;Unnamed&gt;">Layers</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#layersArray">layersArray</a></span></code>
 <div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private <a class="jdoc_a" href="Menu.html" title="class in &lt;Unnamed&gt;">Menu</a></code></td>
+<td class="colFirst"><code>private <a class="jdoc_a" href="javadoc_menu.html" title="class in &lt;Unnamed&gt;">Menu</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#menuBar">menuBar</a></span></code>
 <div class="block">The click-able and visible menu bar that allows the user to decide on the color, size, tool and layer.</div>
 </td>
@@ -227,7 +237,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private <a class="jdoc_a" href="Tools.html" title="class in &lt;Unnamed&gt;">Tools</a></code></td>
+<td class="colFirst"><code>private <a class="jdoc_a" href="javadoc_tools.html" title="class in &lt;Unnamed&gt;">Tools</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_paintApp.html#toolbar">toolbar</a></span></code>
 <div class="block">A toolbar object that controls the style of the paint tool.</div>
 </td>
@@ -471,10 +481,6 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <h4 class="jdoc_h4">serialVersionUID</h4>
 <pre>private static final&nbsp;long serialVersionUID</pre>
 <div class="block">A generated serialVersionUID that ensures proper version control.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a class="jdoc_a" href="constant-values.html#PaintApp.serialVersionUID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a class="jdoc_a" name="appWidth">
@@ -513,7 +519,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <ul class="jdoc_ul blockList">
 <li class="blockList">
 <h4 class="jdoc_h4">menuBar</h4>
-<pre>private&nbsp;<a class="jdoc_a" href="Menu.html" title="class in &lt;Unnamed&gt;">Menu</a> menuBar</pre>
+<pre>private&nbsp;<a class="jdoc_a" href="javadoc_menu.html" title="class in &lt;Unnamed&gt;">Menu</a> menuBar</pre>
 <div class="block">The click-able and visible menu bar that allows the user to decide on the color, size, tool and layer.</div>
 </li>
 </ul>
@@ -523,7 +529,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <ul class="jdoc_ul blockList">
 <li class="blockList">
 <h4 class="jdoc_h4">toolbar</h4>
-<pre>private&nbsp;<a class="jdoc_a" href="Tools.html" title="class in &lt;Unnamed&gt;">Tools</a> toolbar</pre>
+<pre>private&nbsp;<a class="jdoc_a" href="javadoc_tools.html" title="class in &lt;Unnamed&gt;">Tools</a> toolbar</pre>
 <div class="block">A toolbar object that controls the style of the paint tool.</div>
 </li>
 </ul>
@@ -635,7 +641,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <ul class="jdoc_ul blockListLast">
 <li class="blockList">
 <h4 class="jdoc_h4">layersArray</h4>
-<pre>private&nbsp;<a class="jdoc_a" href="Layers.html" title="class in &lt;Unnamed&gt;">Layers</a> layersArray</pre>
+<pre>private&nbsp;<a class="jdoc_a" href="javadoc_layers.html" title="class in &lt;Unnamed&gt;">Layers</a> layersArray</pre>
 <div class="block">A Layers object that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
 </li>
 </ul>
@@ -705,8 +711,8 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
  When the user selects a large size for their tool, then the canvas will not be accidentally painted.
  </p>
  <p>
- If the user has a selected menu item, the menu bar is updated and redrawn.
- In every paint() call, the menu bar is redrawn to prevent it from disappearing when the window has gone inactive or been resized.
+ If the user has selected a menu item, the menu bar is updated and redrawn.
+ In every paint() call, the menu bar is redrawn to prevent it from disappearing when the window has gone inactive or resized.
  </p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -722,8 +728,8 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <h4 class="jdoc_h4">paintLayers</h4>
 <pre>public&nbsp;void&nbsp;paintLayers(java.awt.Graphics2D&nbsp;g2Frame)</pre>
 <div class="block">The paint() calls the paintLayers() to update the canvas' graphics.
- If a layer is deleted, the blank deleted layer is first drawn to erase the deleted layer's graphics from the window.
- The rest of the layers are then drawn in ascending order and the blank deleted layer is removed from imageArray.
+ If a layer is deleted, the deleted blank layer is first drawn to erase the deleted layer's graphics from the window.
+ The rest of the layers are then drawn in ascending order and the deleted blank layer is removed from imageArray.
  Regardless of whether the user decided to delete a layer, the current layer is drawn last for visibility.
  If the user is not deleting a layer, the other layers are not redrawn to prevent these layers from flickering.
  Also, the layer status is updated when a layer is created, deleted, or switched to a different layer.</div>
@@ -755,7 +761,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <h4 class="jdoc_h4">windowOpened</h4>
 <pre>public&nbsp;void&nbsp;windowOpened(java.awt.event.WindowEvent&nbsp;e)</pre>
 <div class="block">These window events are required to be implemented, because this class implements the WindowListener.
- However, this paint program does not need these window events so these methods are left blank</div>
+ However, this paint program does not need these window events so these methods are left blank.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>windowOpened</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
@@ -888,7 +894,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <h4 class="jdoc_h4">mouseEntered</h4>
 <pre>public&nbsp;void&nbsp;mouseEntered(java.awt.event.MouseEvent&nbsp;e)</pre>
 <div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.
- However, this paint program does not need these mouse events so these methods are left blank</div>
+ However, this paint program does not need these mouse events so these methods are left blank.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>mouseEntered</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
@@ -916,7 +922,7 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 <h4 class="jdoc_h4">mouseMoved</h4>
 <pre>public&nbsp;void&nbsp;mouseMoved(java.awt.event.MouseEvent&nbsp;e)</pre>
 <div class="block">These mouse events are required to be implemented, because this class implements the MouseListener and MouseMotionListener.
- However, this paint program does not need these mouse events so these methods are left blank
+ However, this paint program does not need these mouse events so these methods are left blank.
  Unlike the mouseDragged(), mouseMoved() is for when the mouse is moving but none of the buttons are held down.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -1016,6 +1022,5 @@ implements java.awt.event.WindowListener, java.awt.event.MouseListener, java.awt
 				<ul class="ulMenu"><a href="../HTML/bj_source.html" class="menuLinks"> Source Code </a></ul>
 			</div>
 		</div>
-	<script type="text/javascript">SyntaxHighlighter.initialize();</script>
 	</BODY>
 </HTML>

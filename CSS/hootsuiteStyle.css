@@ -99,7 +99,7 @@ div.menuButton:hover {
 	height: 100%;
 }
 span.class {
-	color: #2055B0;	/* Dark blue */
+	color: #093785;	/* Dark blue */
 	font-style: italic;
 	font-weight: bold;
 }
@@ -107,7 +107,7 @@ span.var {
 	color: #F6D177;	/* Light orange */
 }
 span.method {
-	color: #96F04F;	/* Yellowish-Green */
+	color: #8CFF00;	/* Yellowish-Green */
 }
 .tdHeading {
 	font-weight: bold;
@@ -183,6 +183,17 @@ div.selectedMenu {
 	background-color: #4FB0F0;
 	text-decoration: none;
 }
+#resume {
+	width: 100%;
+	height: calc(100% - 60px);			/* Internet Explorer */
+	height: -o-calc(100% - 60px); 		/* Opera */
+	height: -webkit-calc(100% - 60px); /* Google, Safari */
+	height: -moz-calc(100% - 60px); 	/* Firefox */
+}
+#coverLetter {
+	width: 100%;
+	height: 100%;
+}
 #banner {
 	background: -webkit-linear-gradient(60deg, #0C4057, #4B97B8); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(60deg, #0C4057, #4B97B8); /* For Opera 11.1 to 12.0 */
@@ -221,7 +232,7 @@ div.selectedMenu {
 	width: calc(100% - 20px);			/* Internet Explorer */
 	width: -o-calc(100% - 20px); 		/* Opera */
 	width: -webkit-calc(100% - 20px); 	/* Google, Safari */
-	height: -moz-calc(100% - 20px); 	/* Firefox */
+	width: -moz-calc(100% - 20px); 		/* Firefox */
 	height: calc(100% - 165px);			/* Internet Explorer */
 	height: -o-calc(100% - 165px); 		/* Opera */
 	height: -webkit-calc(100% - 165px); /* Google, Safari */
