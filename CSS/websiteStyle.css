@@ -54,6 +54,12 @@ h5 {	/* Page headings; eg "Paint Program"; "Colours" */
 	color: #000000;
 	text-align: center;
 }
+h6 {
+	font-family: 'fira sans', sans-serif;
+	font-size: 125%;
+	padding: 0;
+	margin: 0;
+}
 hr {
 	border: 2px #FFFFFF solid;
 }
@@ -69,10 +75,10 @@ p {
 	color: #000000;
 }
 a {
-	color: #FFFFFF;
+	color: #7E1C68;
 }
 a:hover {
-	color: #96F04F;
+	color: #237234;
 }
 video {
 	display: block;
@@ -83,7 +89,7 @@ video {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	margin: -50px 15px 5px 15px;
+	margin: -5px 15px 0px 15px;
 	padding: 0;
 }
 div.menuButton:hover {
@@ -91,8 +97,9 @@ div.menuButton:hover {
 }
 .verticalLine {
 	display: inline-block;
-	padding: 10px 0px 10px 2px;
+	margin: 10px 0px 10px 0px;
 	height: 60px;
+	vertical-align: middle;
 }
 .bodyContent {
 	display: inline-block;
@@ -107,7 +114,7 @@ span.var {
 	color: #F6D177;	/* Light orange */
 }
 span.method {
-	color: #8CFF00;	/* Yellowish-Green */
+	color: #FFFFFF;	/* White */
 }
 .tdHeading {
 	font-weight: bold;
@@ -125,6 +132,9 @@ a.headingLink {
 .ulMenu {
 	padding: 0;
 	margin: 0 0 5px 0;
+}
+.liResume {
+	margin-left: 25px;
 }
 .jdoc_ulMenu {
 	padding: 0 0 0 15px;
@@ -150,11 +160,12 @@ a.headingLink {
 .menuLinks:hover {
 	color: #EBCF7C;
 }
-.selectedMenu {
-	color: #96F04F;
-}
 .submenuHeading {
 	text-decoration: none;
+	color: #FFFFFF;
+}
+.selectedMenu {
+	color: #96F04F;
 }
 .selectedSubmenu {
 	color: #EBCF7C;
@@ -187,22 +198,53 @@ div.selectedMenu {
 	width: 100%;
 	height: 100%;
 }
+.resumeLogo {
+	width: 50px;
+	display: inline-block;
+	float: left;
+	margin-right: 15px;
+}
+.languagesLogo {
+	vertical-align: top;
+	float: right;
+	display: inline;
+}
+.floatLeft {
+	float: left;
+}
+.pAlignResume {
+	margin-left: 65px;
+}
+.liAlignResume {
+	margin-left: 65px;
+}
+.projectHeading {
+	color: #442B88;
+	font-weight: bold;
+}
+.achievementHeading {
+	color: #7E1C68;
+	font-weight: bold;
+}
 #banner {
 	background: -webkit-linear-gradient(60deg, #0C4057, #4B97B8); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(60deg, #0C4057, #4B97B8); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(60deg, #0C4057), #4B97B8); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(60deg, #0C4057, #4B97B8); /* Standard syntax */
-	height: 115px;
+	height: 80px;
  }
 #bannerTitle {
 	display: inline-block;
+	vertical-align: middle;
 }
 #bannerName {
 	display: block;
 	padding: 0px;
-	margin: 15px 45px 0px 30px;
+	vertical-align: middle;
+	margin-left: 15px;
+	margin-right: 15px;
 }
-#bannerHootsuite {
+#bannerSubtitle {
 	display: block;
 	padding: 0px;
 	margin: -8px 15px 0px 35px;
@@ -226,10 +268,10 @@ div.selectedMenu {
 	width: -o-calc(100% - 20px); 		/* Opera */
 	width: -webkit-calc(100% - 20px); 	/* Google, Safari */
 	width: -moz-calc(100% - 20px); 		/* Firefox */
-	height: calc(100% - 165px);			/* Internet Explorer */
-	height: -o-calc(100% - 165px); 		/* Opera */
-	height: -webkit-calc(100% - 165px); /* Google, Safari */
-	height: -moz-calc(100% - 165px); 	/* Firefox */
+	height: calc(100% - 130px);			/* Internet Explorer */
+	height: -o-calc(100% - 130px); 		/* Opera */
+	height: -webkit-calc(100% - 130px); /* Google, Safari */
+	height: -moz-calc(100% - 130px); 	/* Firefox */
 	margin: 0;
 	padding: 10px;
 }
@@ -238,11 +280,15 @@ div.selectedMenu {
 	width: -o-calc(100% - 225px); 		/* Opera */
 	width: -webkit-calc(100% - 225px); 	/* Google, Safari */
 	width: -moz-calc(100% - 225px); 	/* Firefox */
-	background-color: #26B59D;
 	vertical-align: middle;
 	margin-right: 10px;
 	padding: 15px;
 	overflow: auto;
+	background: -webkit-linear-gradient(60deg, #26B59D, #DBCA78); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(60deg, #26B59D, #DBCA78); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(60deg, #26B59D, #DBCA78); /* For Firefox 3.6 to 15 */
+	background: -webkit-gradient(60deg, #26B59D, #DBCA78); /* For Safari 4+ and Chrome */
+	background: linear-gradient(60deg, #26B59D, #DBCA78); /* Standard syntax */
 }
 #sidebar {
 	width: 150px;
@@ -250,4 +296,17 @@ div.selectedMenu {
 	vertical-align: middle;
 	padding: 15px;
 	margin: 0;
+}
+#bioImage {
+	width:250px;
+	border-radius: 15px 50px 30px;
+	float: left;
+}
+#intro {
+	float: right;
+	width: calc(100% - 265px);
+	width: -o-calc(100% - 265px); /* opera */
+	width: -webkit-calc(100% - 265px); /* google, safari */
+	width: -moz-calc(100% - 265px); /* firefox */
+	display: inline-block;
 }
