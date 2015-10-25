@@ -78,31 +78,31 @@ extends java.lang.Object</pre><br>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#changeLayer">changeLayer</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#changeLayer">changeLayer</a></span></code>
 <div class="block">Variables used as "switches" during program execution.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#cLayerNum">cLayerNum</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#cLayerNum">cLayerNum</a></span></code>
 <div class="block">Index of imageArray allows access to the current layer and is used to make a graphical context for that layer.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#deleteLayer">deleteLayer</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#deleteLayer">deleteLayer</a></span></code>
 <div class="block">Variables used as "switches" during program execution.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private java.util.ArrayList&lt;java.awt.image.BufferedImage&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#imageArray">imageArray</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#imageArray">imageArray</a></span></code>
 <div class="block">An ArrayList stores BufferedImages of each layer.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) <a class="jdoc_a" href="javadoc_paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#paintLab">paintLab</a></span></code>
+<td class="colFirst"><code>(package private) <a class="jdoc_a" href="paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#paintLab">paintLab</a></span></code>
 <div class="block">A PaintApp object has only one instance and allows this class to access its non-static methods and fields.</div>
 </td>
 </tr>
@@ -121,7 +121,7 @@ extends java.lang.Object</pre><br>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#Layers-PaintApp-">Layers</a></span>(<a class="jdoc_a" href="javadoc_paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab)</code>
+<td class="colOne"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#Layers-PaintApp-">Layers</a></span>(<a class="jdoc_a" href="paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab)</code>
 <div class="block">A Layers object is constructed that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
 </td>
 </tr>
@@ -142,43 +142,43 @@ extends java.lang.Object</pre><br>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#deleteLayer--">deleteLayer</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#deleteLayer--">deleteLayer</a></span>()</code>
 <div class="block">When the user has decided to delete a layer, the method checks that the user-requested layer is not the only layer left.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#getcLayerNum--">getcLayerNum</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#getcLayerNum--">getcLayerNum</a></span>()</code>
 <div class="block">Returns the current index of imageArray</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.ArrayList&lt;java.awt.image.BufferedImage&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#getImageArray--">getImageArray</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#getImageArray--">getImageArray</a></span>()</code>
 <div class="block">Returns the ArrayList of BufferedImages, which store the layers</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#newLayer--">newLayer</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#newLayer--">newLayer</a></span>()</code>
 <div class="block">This method creates a new layer after the current layer by adding a new BufferedImage after the index cLayerNum to the imageArray.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#nextLayer--">nextLayer</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#nextLayer--">nextLayer</a></span>()</code>
 <div class="block">When the user switches to the next layer, the method first checks whether the new index exists in the the imageArray.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#previousLayer--">previousLayer</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#previousLayer--">previousLayer</a></span>()</code>
 <div class="block">When the user switches to the previous layer, the method first checks whether the new index exists in the the imageArray.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="javadoc_layers.html#setcLayerNum-int-">setcLayerNum</a></span>(int&nbsp;cNum)</code>
+<td class="colLast"><code><span class="memberNameLink"><a class="jdoc_a" href="layers.html#setcLayerNum-int-">setcLayerNum</a></span>(int&nbsp;cNum)</code>
 <div class="block">This method updates the current index of imageArray.</div>
 </td>
 </tr>
@@ -210,7 +210,7 @@ extends java.lang.Object</pre><br>
 <ul class="jdoc_ul blockList">
 <li class="blockList">
 <h4 class="jdoc_h4">paintLab</h4>
-<pre><a class="jdoc_a" href="javadoc_paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a> paintLab</pre>
+<pre><a class="jdoc_a" href="paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a> paintLab</pre>
 <div class="block">A PaintApp object has only one instance and allows this class to access its non-static methods and fields. 
  I did not make PaintApp's fields static, because those fields refer to the one and same object, the paint program.
  I did not want to place the Layer's methods into PaintApp, because those methods belong in its own separate category.
@@ -271,7 +271,7 @@ extends java.lang.Object</pre><br>
 <ul class="jdoc_ul blockListLast">
 <li class="blockList">
 <h4 class="jdoc_h4">Layers</h4>
-<pre>public&nbsp;Layers(<a class="jdoc_a" href="javadoc_paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab)</pre>
+<pre>public&nbsp;Layers(<a class="jdoc_a" href="paintApp.html" title="class in &lt;Unnamed&gt;">PaintApp</a>&nbsp;pLab)</pre>
 <div class="block">A Layers object is constructed that controls the creation and deletion of layers, and what happens when the user wants to move to a different layer.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
