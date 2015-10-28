@@ -264,7 +264,7 @@ function checkNumRounds() {	// The game continues if the maximum number of round
 			document.blackJack.potMoney.value = document.blackJack.yourMoney[0].value
 		}
 		else {	// When I submitted this game for my Computers 11 class, the page would close if the player did not want to play another game
-			// I changed this to refreshing the page instead for my Dogwood Portfolio
+			// I decided to change closing the page to refreshing the page.
 			location.reload(true);
 		}
 	}
@@ -285,7 +285,7 @@ function playAgain() {	// When the game ends because to the player has gone bank
 		document.blackJack.potMoney.value = document.blackJack.yourMoney[0].value
 	}
 	else {	// When I submitted this game for my Computers 11 class, the page would close if the player did not want to play another game
-		// I changed this to refreshing the page instead for my Dogwood Portfolio
+		// I decided to change closing the page to refreshing the page.
 		location.reload(true);
 	}
 }
