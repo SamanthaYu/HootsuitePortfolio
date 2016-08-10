@@ -1,0 +1,163 @@
+% !TeX spellcheck = en_US
+% Preamble
+% ---
+\documentclass{article}
+
+% Packages
+% ---
+\usepackage{amsmath} % Advanced math typesetting
+\usepackage[utf8]{inputenc} % Unicode support (Umlauts etc.)
+\usepackage[USenglish]{babel}
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage{amssymb} % Math symbols
+\usepackage{enumitem} % Numbering items
+\usepackage[margin=0.75in]{geometry} % Change margins
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+
+% Change hyperlink style
+\usepackage[
+	colorlinks = true,
+	linkcolor = blue,
+	urlcolor  = blue,
+	citecolor = blue,
+	anchorcolor = blue,
+]{hyperref}
+
+% Section heading
+\newenvironment{sectionHeading}{
+	\hrule height 1.5pt
+	\vspace{0.75em}
+}
+
+% Heading for organization; role; events
+\newenvironment{itemHeading}{
+	\setlength{\parindent}{2em}
+}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0em}
+\setlength{\baselineskip}{0em}
+\setlist{
+	leftmargin=4.5em,
+	topsep=0em
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\sfdefault}{ppl} % Palantino is the default serif font
+
+\newenvironment{sans}{\fontfamily{phv}\selectfont}{\par}	% Sans serif: Helvetica
+\newenvironment{serif}{\fontfamily{ppl}\selectfont}{\par}	% Serif: Palatino
+
+\pagenumbering{gobble}	% Turn off page numbering
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+	\begin{center}
+		{\begin{sans}
+				\huge \textbf{Samantha Yu}\\
+		\end{sans}}
+		{\small
+			5425 Gordon Avenue, Burnaby, BC, Canada\ \ \textbullet
+			\ \ V5E 3L9
+			\\
+			Website: {\color{blue}\href{http://samanthayu.github.io/}{samanthayu.github.io}}\ \ \textbullet
+			\ \ Phone: 604-522-8483\ \ \textbullet
+			\ \ Email: samantha\_yu@sfu.ca
+		}
+	\end{center}
+	
+	\subsection*{\begin{sans}Education\end{sans}} % * Removes the section numbers
+	\begin{sectionHeading}\end{sectionHeading}
+	\begin{serif}
+		\textbf{Simon Fraser University} \textit{(Sept. 2015 - April 2019)}
+		\begin{itemize}
+			\item Bachelor of Science: Computing Science Major
+			\item \textbf{Relevant Courses:} CMPT 225 - Data Structures; CMPT 295 - Introduction to Computer Systems
+		\end{itemize}
+	\bigskip
+	
+	\textbf{Technical Skills:} Java, C, C++, x86-64 Assembly, Python, MATLAB, \LaTeX, Apache, JavaScript, HTML/CSS
+	\end{serif}
+	
+	\subsection*{\begin{sans}Projects\end{sans}} % * Removes the section numbers
+	\begin{sectionHeading}\end{sectionHeading}
+	Automated Window Cleaner: \textbf{Java} \textit{(Sept. 2015 - Dec. 2015)}
+	\begin{itemize}
+		\item Simulated a window cleaner and its suction cups moving on a skyscraper
+	\end{itemize}
+	\bigskip
+
+	Universal Motor for Vacuum Cleaner \textit{(May 2015 - June 2015)}
+	\begin{itemize}
+		\item Built an universal motor to study electromagnetism and back-EMF
+	\end{itemize}
+	\bigskip
+	
+	Paint Program: \textbf{Java} \textit{(Aug. 2014 - Jan. 2015)}
+	\begin{itemize}
+		\item Incorporated the concept of double buffering
+		\item Implemented the capability to add, delete, and modify layers
+	\end{itemize}
+	\bigskip
+	
+	BC Senior Girls Volleyball Provincials Website: \textbf{HTML/CSS} \textit{(Oct. - Nov. 2013)}
+	\begin{itemize}
+		\item Served sixteen teams and their supporters from all over British Columbia
+		\item Designed overall layout including templates, drop-down menu and footer menu
+	\end{itemize}
+	
+	\subsection*{\begin{sans}Extracurricular Activities\end{sans}}
+	\begin{sectionHeading}\end{sectionHeading}
+	SFU Satellite Design Club \textit{(Feb. 2016 - Present)}
+	\begin{itemize}
+		\item Programming onboard computer for a weather balloon and a satellite
+		\item Building a mobile app to display telemetry and control the camera on the weather balloon
+	\end{itemize}
+	\bigskip
+	
+	Women in Computing Science: Website Manager \textit{(Sept. 2015 - Present)}
+	\begin{itemize}
+		\item Organized the Try/CATCH 2016 conference to introduce 47 high school girls to computing science
+		\item Transferring content from old website to updated website
+	\end{itemize}
+	\bigskip
+
+	IEEE Game Development Club \textit{(Sept. 2015 - Dec. 2015)}
+	\begin{itemize}
+		\item Learned to program video games with Irrlicht, open source game engine in C++
+	\end{itemize}
+
+	\subsection*{\begin{sans}Achievements\end{sans}}
+	\begin{sectionHeading}\end{sectionHeading}
+	Simon Fraser University
+	\begin{itemize}
+		\item Simon Fraser University Open Scholarship \textit{(May 2016)}
+	\end{itemize}
+	\bigskip
+	
+	Micosoft
+	\begin{itemize}
+		\item \#DevMov Competition Top Prize: Surface Pro 4 \textit{(June 2016)}
+	\end{itemize}
+	\bigskip
+	
+	BC Ministry of Education
+	\begin{itemize}
+		\item Dogwood District/Authority Award for Computer Programming \textit{(April 2015)}
+	\end{itemize}
+	\bigskip
+	
+	\subsection*{\begin{sans}Work Experience\end{sans}}
+	\begin{sectionHeading}\end{sectionHeading}
+	Kumon Assistant \textit{(Sept. 2014 - Aug. 2015)}
+	\begin{itemize}
+		\item Tutored children of various levels in math and English
+	\end{itemize}
+	\bigskip
+\end{document}
