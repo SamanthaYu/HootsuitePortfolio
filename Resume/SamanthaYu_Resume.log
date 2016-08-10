@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.1)  10 AUG 2016 11:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.1)  10 AUG 2016 11:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,10 +653,10 @@ Package rerunfilecheck Info: File `SamanthaYu_Resume.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 8436 strings out of 493304
- 119941 string characters out of 6139872
+ 8435 strings out of 493304
+ 119923 string characters out of 6139872
  220672 words of memory out of 5000000
- 11790 multiletter control sequences out of 15000+600000
+ 11789 multiletter control sequences out of 15000+600000
  16239 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  29i,5n,32p,273b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -667,7 +667,7 @@ fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on SamanthaYu_Resume.pdf (1 page, 76006 bytes).
+Output written on SamanthaYu_Resume.pdf (1 page, 76194 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
