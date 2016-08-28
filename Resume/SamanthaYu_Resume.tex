@@ -11,29 +11,88 @@
 \usepackage{listings} % Source code formatting and highlighting
 \usepackage{amssymb} % Math symbols
 \usepackage{enumitem} % Numbering items
-\usepackage[margin=0.75in]{geometry} % Change margins
+\usepackage[left=0.75in, right=0.75in, top=0.5in, bottom=0.5in]{geometry} % Change margins
 \usepackage{parskip}
 \usepackage{indentfirst}
 \usepackage{enumitem}
 
 % Change hyperlink style
 \usepackage[
-	colorlinks = true,
-	linkcolor = blue,
-	urlcolor  = blue,
-	citecolor = blue,
-	anchorcolor = blue,
+colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = blue,
 ]{hyperref}
 
-% Section heading
-\newenvironment{sectionHeading}{
-	\hrule height 1.5pt
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\sfdefault}{ppl} % Palantino is the default serif font
+
+\newenvironment{sans}{\fontfamily{pag}\selectfont}{\par}	% Sans serif: Avant Garde
+\newenvironment{serif}{\fontfamily{ppl}\selectfont}{\par}	% Serif: Palatino
+
+\pagenumbering{gobble}	% Turn off page numbering
+
+\newcommand{\resumeHeader}{
+	\begin{center}{
+			\textsc{
+				\fontsize{30}{32}\selectfont
+				\textbf{Samantha Yu}\\
+			}
+			\vspace{0.5em}
+		}
+		{\fontsize{10}{12}\selectfont
+			5425 Gordon Avenue, Burnaby, BC, Canada\ \ \textbullet
+			\ \ V5E 3L9 \textbullet
+			\ \ Phone: 604-522-8483\ \ 
+			\\
+			Website: {\color{blue}\href{http://samanthayu.github.io/}{samanthayu.github.io}}\ \ \textbullet
+			\ \ Email: samanthayu36@gmail.com\ \ \textbullet
+			\ \ {\color{blue}\href{https://www.linkedin.com/in/samanthayu36}{linkedin.com/in/samanthayu36}}
+		}
+	\end{center}
 	\vspace{0.75em}
+}
+
+\newenvironment{sectionHeading}{
+	\vspace{0.05em}
+	\noindent
+	\begin{sans}
+		\bfseries	% Makes the text bold
+		\Large
+	}{
+\end{sans}
+\vspace{0.5em}
+\hrule height 1.5pt
+\vspace{0.5em}
+}
+
+\renewcommand{\normalsize}{
+	\fontsize{11pt}{15pt}\selectfont
 }
 
 % Heading for organization; role; events
 \newenvironment{itemHeading}{
-	\setlength{\parindent}{2em}
+	\begin{sans}
+		\setlength{\parindent}{1.25em}
+	}{
+\end{sans}
+}
+
+\newenvironment{resumeItem}{
+	\setlist[itemize]{leftmargin=3.5em}
+	\begin{itemize}
+	}
+	{
+	\end{itemize}
+	\vspace{1em}
+}
+
+\newcommand{\resumeYear}[1]{
+	\hfill
+	\serif
+	\textsc{#1}
 }
 
 \setlength{\parindent}{2em}
@@ -44,116 +103,95 @@
 	topsep=0em
 }
 
-\renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\sfdefault}{ppl} % Palantino is the default serif font
-
-\newenvironment{sans}{\fontfamily{phv}\selectfont}{\par}	% Sans serif: Helvetica
-\newenvironment{serif}{\fontfamily{ppl}\selectfont}{\par}	% Serif: Palatino
-
-\pagenumbering{gobble}	% Turn off page numbering
-
-% make "C++" look pretty when used in text by touching up the plus signs
-\newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
-
 % and the actual content starts here
 \begin{document}
-	\begin{center}
-		{\begin{sans}
-				\huge \textbf{Samantha Yu}\\
-		\end{sans}}
-		{\small
-			Website: {\color{blue}\href{http://samanthayu.github.io/}{samanthayu.github.io}}\ \ \textbullet
-			\ \ Email: samanthayu36@gmail.com
-		}
-	\end{center}
+	\resumeHeader
 	
-	\subsection*{\begin{sans}Education\end{sans}} % * Removes the section numbers
-	\begin{sectionHeading}\end{sectionHeading}
-	\begin{serif}
-		\textbf{Simon Fraser University} \textit{(Sept. 2015 - April 2019)}
-		\begin{itemize}
-			\item Bachelor of Science: Computing Science Major
-			\item \textbf{Relevant Courses:} CMPT 225 - Data Structures; CMPT 295 - Introduction to Computer Systems
-		\end{itemize}
-	\bigskip
+	\begin{sectionHeading}
+		Education
+	\end{sectionHeading}
+	\begin{itemHeading}
+		Simon Fraser University \resumeYear{Sept 2015 - April 2019}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Bachelor of Science: Computing Science Major
+	\end{resumeItem}
 	
-	\textbf{Technical Skills:} Java, C, C++, x86-64 Assembly, Python, MATLAB, \LaTeX, Apache, JavaScript, HTML/CSS
-	\end{serif}
+	\begin{itemHeading}
+		Technical Skills
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item \textbf{Languages:} Java, C, C++, Python, MATLAB, x86-64 Assembly, \LaTeX
+		\item \textbf{Web Development:} HTML/CSS, JavaScript, Apache Web Server
+	\end{resumeItem}
 	
-	\subsection*{\begin{sans}Projects\end{sans}} % * Removes the section numbers
-	\begin{sectionHeading}\end{sectionHeading}
-	Automated Window Cleaner: \textbf{Java} \textit{(Sept. 2015 - Dec. 2015)}
-	\begin{itemize}
-		\item Simulated a window cleaner and its suction cups moving on a skyscraper
-	\end{itemize}
-	\bigskip
-
-	Universal Motor for Vacuum Cleaner \textit{(May 2015 - June 2015)}
-	\begin{itemize}
-		\item Built an universal motor to study electromagnetism and back-EMF
-	\end{itemize}
-	\bigskip
+	\begin{sectionHeading}
+		Projects
+	\end{sectionHeading}
+	\begin{itemHeading}
+		Automated Window Cleaner: \textbf{Java} \resumeYear{Sept 2015 - Dec 2015}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Designed an automated window cleaner with a dolly, suction cups, water and chemical tanks
+		\item Investigated alternative methods for attaching the window cleaner, such as gecko tape
+		\item Developed a graphical simulation of the window cleaner washing a skyscraper in Java
+		\item Revised the initial algorithm so that the movement was more feasible
+	\end{resumeItem}
 	
-	Paint Program: \textbf{Java} \textit{(Aug. 2014 - Jan. 2015)}
-	\begin{itemize}
-		\item Incorporated the concept of double buffering
-		\item Implemented the capability to add, delete, and modify layers
-	\end{itemize}
-	\bigskip
+	\begin{itemHeading}
+		Paint Program: \textbf{Java} \resumeYear{Aug 2014 - Jan 2015}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Implemented the concept of double buffering by creating an array of transparent images
+		\item Extended the program's expected capabilities so that it can add, delete, and modify layers
+		\item Modified the suggested paint tools to create smoother strokes
+	\end{resumeItem}
 	
-	BC Senior Girls Volleyball Provincials Website: \textbf{HTML/CSS} \textit{(Oct. - Nov. 2013)}
-	\begin{itemize}
-		\item Served sixteen teams and their supporters from all over British Columbia
+	\begin{itemHeading}
+		BC Senior Girls Volleyball Provincials Website: \textbf{HTML/CSS} \resumeYear{Oct. 2013 - Nov. 2013}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Served 16 teams and their supporters from all over British Columbia
 		\item Designed overall layout including templates, drop-down menu and footer menu
-	\end{itemize}
+		\item Edited my peers' webpages before publishing to the server
+	\end{resumeItem}
 	
-	\subsection*{\begin{sans}Extracurricular Activities\end{sans}}
-	\begin{sectionHeading}\end{sectionHeading}
-	SFU Satellite Design Club \textit{(Feb. 2016 - Present)}
-	\begin{itemize}
-		\item Programming onboard computer for a weather balloon and a satellite
+	\begin{sectionHeading}
+		Extracurricular Activities
+	\end{sectionHeading}
+	\begin{itemHeading}
+		Women in Computing Science: Website Manager \resumeYear{Sept 2015 - Present}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Added a form to the website so users do not have to leave the website to subscribe to maillist
+		\item Adjudicated Grace Hopper travel grants from the School of Computing Science and WiCS
+		\item Creating a WiCS mentorship program and a technical interview study group
+	\end{resumeItem}
+
+	\begin{itemHeading}
+		SFU Satellite Design Club \resumeYear{Feb 2016 - Present}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Secured a \$2500 grant from Mobify
 		\item Building a mobile app to display telemetry and control the camera on the weather balloon
-	\end{itemize}
-	\bigskip
-	
-	Women in Computing Science: Website Manager \textit{(Sept. 2015 - Present)}
-	\begin{itemize}
-		\item Organized the Try/CATCH 2016 conference to introduce 47 high school girls to computing science
-		\item Transferring content from old website to updated website
-	\end{itemize}
-	\bigskip
+		\item Programming onboard computer for a weather balloon and a satellite
+		\item Preparing to enter the Canadian Satellite Design Challenge
+	\end{resumeItem}
 
-	IEEE Game Development Club \textit{(Sept. 2015 - Dec. 2015)}
-	\begin{itemize}
-		\item Learned to program video games with Irrlicht, open source game engine in C++
-	\end{itemize}
-
-	\subsection*{\begin{sans}Achievements\end{sans}}
-	\begin{sectionHeading}\end{sectionHeading}
-	Simon Fraser University
-	\begin{itemize}
-		\item Simon Fraser University Open Scholarship \textit{(May 2016)}
-	\end{itemize}
-	\bigskip
+	\begin{sectionHeading}
+		Achievements
+	\end{sectionHeading}
+	\begin{itemHeading}
+		Micosoft
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item \#DevMov Competition Top Prize: Surface Pro 4 \resumeYear{June 2016}
+	\end{resumeItem}
 	
-	Micosoft
-	\begin{itemize}
-		\item \#DevMov Competition Top Prize: Surface Pro 4 \textit{(June 2016)}
-	\end{itemize}
-	\bigskip
-	
-	BC Ministry of Education
-	\begin{itemize}
-		\item Dogwood District/Authority Award for Computer Programming \textit{(April 2015)}
-	\end{itemize}
-	\bigskip
-	
-	\subsection*{\begin{sans}Work Experience\end{sans}}
-	\begin{sectionHeading}\end{sectionHeading}
-	Kumon Assistant \textit{(Sept. 2014 - Aug. 2015)}
-	\begin{itemize}
-		\item Tutored children of various levels in math and English
-	\end{itemize}
-	\bigskip
+	\begin{itemHeading}
+		BC Ministry of Education
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Dogwood District/Authority Award for Computer Programming \resumeYear{April 2015}
+	\end{resumeItem}
 \end{document}
