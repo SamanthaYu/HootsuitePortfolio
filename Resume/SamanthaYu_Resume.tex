@@ -1,4 +1,4 @@
-% !TeX spellcheck = en_US
+% !TeX spellcheck = en_CA
 % Preamble
 % ---
 \documentclass{article}
@@ -15,6 +15,10 @@
 \usepackage{parskip}
 \usepackage{indentfirst}
 \usepackage{enumitem}
+\usepackage{lipsum}
+\usepackage{changepage}
+\usepackage[autostyle]{csquotes}
+\usepackage[dvipsnames]{xcolor}
 
 % Change hyperlink style
 \usepackage[
@@ -34,6 +38,9 @@ anchorcolor = blue,
 
 \pagenumbering{gobble}	% Turn off page numbering
 
+\newcommand{\leftm}{1em}
+\newcommand{\rightm}{0em}
+
 \newcommand{\resumeHeader}{
 	\begin{center}{
 			\textsc{
@@ -44,10 +51,11 @@ anchorcolor = blue,
 		}
 		{\fontsize{10}{12}\selectfont
 			Vancouver, Canada\ \ \textbullet
-			\ \ Email: samanthayu36@gmail.com\ \
-			
-			\ \ Website: {\color{blue}\href{http://samanthayu.github.io/}{samanthayu.github.io}}\ \ \textbullet
-			\ \ LinkedIn: {\color{blue}\href{https://www.linkedin.com/in/samanthayu36}{linkedin.com/in/samanthayu36}}
+			\ \ samanthayu36@gmail.com \textbullet
+			\ \ 604-522-8483\ \ 
+			\\
+			Website: {\color{blue}\href{http://samanthayu.github.io/}{samanthayu.github.io}}\ \ \textbullet
+			\ \ LinkedIn: {\color{blue}\href{https://www.linkedin.com/in/samanthayu36}{linkedin.com/in/samanthayu36}}\ \
 		}
 	\end{center}
 	\vspace{0.75em}
@@ -70,27 +78,36 @@ anchorcolor = blue,
 	\fontsize{11pt}{15pt}\selectfont
 }
 
+\definecolor{ForestGreen}{HTML}{007A43}
+
 % Heading for organization; role; events
 \newenvironment{itemHeading}{
 	\begin{sans}
-		\setlength{\parindent}{1.25em}
-	}{
+		\begin{adjustwidth}{\leftm}{}
+		}{
+	\end{adjustwidth}
 \end{sans}
 }
 
 \newenvironment{resumeItem}{
 	\setlist[itemize]{leftmargin=3.5em}
 	\begin{itemize}
-	}
-	{
-	\end{itemize}
-	\vspace{1em}
+	}{
+\end{itemize}
+\vspace{1em}
 }
 
 \newcommand{\resumeYear}[1]{
 	\hfill
 	\serif
 	\textsc{#1}
+}
+
+\renewenvironment{paragraph}{
+	\begin{adjustwidth}{\leftm}{\rightm}
+	}{
+\end{adjustwidth}
+\vspace{1em}
 }
 
 \setlength{\parindent}{0em}
@@ -104,28 +121,30 @@ anchorcolor = blue,
 % and the actual content starts here
 \begin{document}
 	\resumeHeader
-	
 	\begin{sectionHeading}
-		Education
+	    Technical Work Experience
 	\end{sectionHeading}
 	\begin{itemHeading}
-		Simon Fraser University \resumeYear{Sept 2015 - April 2019}
+	    \textbf{Google} $\vert$ Engineering Practicum Intern: \textbf{C++} \resumeYear{May 2017 - August 2017}
 	\end{itemHeading}
 	\begin{resumeItem}
-		\item Bachelor of Science: Computing Science Major
-	\end{resumeItem}
-	
-	\begin{itemHeading}
-		Technical Skills
-	\end{itemHeading}
-	\begin{resumeItem}
-		\item \textbf{Languages:} Java, C, C++, Python, MATLAB, x86-64 Assembly, \LaTeX
-		\item \textbf{Web Development:} HTML/CSS, JavaScript, Apache Web Server
+	    \item Investigating the worst cases of liquid sharding in Cloud Dataflow, a Big Data processing system
+	    \item Simulating how various algorithms would alleviate problems caused by data imbalance
+	    \item Designing and implementing algorithms that address the hidden clusters of data into production
 	\end{resumeItem}
 	
 	\begin{sectionHeading}
-		Projects
+		Technical Projects
 	\end{sectionHeading}
+	\begin{itemHeading}
+	    {\color{blue}\href{http://erdos314.herokuapp.com/}{erdos}}: Comprehensive Math Chat Application \resumeYear{Nov 2016 - Dec 2016}
+	\end{itemHeading}
+	\begin{resumeItem}
+	    \item Rendered messages with mathematical equations and symbols using the KaTeX JavaScript library
+	    \item Enabled users to query messages to solve and graph equations with the WolframAlpha API
+	    \item Debugged several unexpected problems like duplicate chatrooms and unsorted messages
+	\end{resumeItem}
+	
 	\begin{itemHeading}
 		Automated Window Cleaner: \textbf{Java} \resumeYear{Sept 2015 - Dec 2015}
 	\end{itemHeading}
@@ -133,7 +152,6 @@ anchorcolor = blue,
 		\item Designed an automated window cleaner with a dolly, suction cups, and water and chemical tanks
 		\item Investigated alternative methods for attaching the window cleaner, such as gecko tape
 		\item Developed a graphical simulation of the window cleaner washing a skyscraper in Java
-		\item Revised the initial algorithm so that the movement was more feasible
 	\end{resumeItem}
 	
 	\begin{itemHeading}
@@ -145,35 +163,16 @@ anchorcolor = blue,
 		\item Improved the suggested paint tools by using the Graphics2D library to create smoother strokes
 	\end{resumeItem}
 	
-	\begin{itemHeading}
-		BC Senior Girls Volleyball Provincials Website: \textbf{HTML/CSS} \resumeYear{Oct. 2013 - Nov. 2013}
-	\end{itemHeading}
-	\begin{resumeItem}
-		\item Served 16 teams and their supporters from all over British Columbia
-		\item Designed overall layout in HTML/CSS, including templates, drop-down menu and footer menu
-		\item Edited my peers' webpages before publishing to the server with Adobe Dreamweaver
-	\end{resumeItem}
-	
 	\begin{sectionHeading}
 		Extracurricular Activities
 	\end{sectionHeading}
 	\begin{itemHeading}
-		SFU Satellite Design Club: Computing Subsystem \resumeYear{Feb 2016 - Present}
+		Women in Computing Science \resumeYear{Sept 2015 - Present}
 	\end{itemHeading}
 	\begin{resumeItem}
-		\item Secured a \$2500 grant from the \$10,000 that Mobify reserved for student projects
-		\item Building a mobile app to display telemetry and control the camera on the weather balloon
-		\item Programming onboard computer for a weather balloon and a satellite
-		\item Entering the Canadian Satellite Design Challenge for the prize of launching a satellite into space
-	\end{resumeItem}
-	
-	\begin{itemHeading}
-		Women in Computing Science: Website Manager \resumeYear{Sept 2015 - Present}
-	\end{itemHeading}
-	\begin{resumeItem}
-		\item Added a form to the website so users do not have to leave the website to subscribe to maillist
-		\item Adjudicated Grace Hopper conference travel grants worth a cumulative total of \$14,000
-		\item Launching a WiCS mentorship program and a technical interview study group
+		\item Adjudicated travel grants for the Grace Hopper conference worth a cumulative total of \$14,000
+		\item Trained mentors for the new mentorship program as the mentor coordinator
+		\item Launched a technical interview study group, CodeMavens, to practise whiteboarding
 	\end{resumeItem}
 
 	\begin{sectionHeading}
@@ -191,5 +190,23 @@ anchorcolor = blue,
 	\end{itemHeading}
 	\begin{resumeItem}
 		\item Dogwood District/Authority Award for Computer Programming \resumeYear{April 2015}
+	\end{resumeItem}
+	
+	\begin{sectionHeading}
+		Education
+	\end{sectionHeading}
+	\begin{itemHeading}
+		Simon Fraser University \resumeYear{Sept 2015 - April 2019}
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item Bachelor of Science: Computing Science Major - Top 15\% of CS Majors at SFU
+		\item \textbf{Relevant Courses:} Model-Based Computer Vision (CMPT 414); Operating Systems I (CMPT 300)
+	\end{resumeItem}
+	
+	\begin{itemHeading}
+		Technical Skills
+	\end{itemHeading}
+	\begin{resumeItem}
+		\item \textbf{Languages:} C, C++, HTML/CSS, Java, JavaScript, \LaTeX, MATLAB, x86-64 Assembly
 	\end{resumeItem}
 \end{document}
